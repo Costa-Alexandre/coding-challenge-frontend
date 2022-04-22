@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Total.css';
 
 export default function Total({ sum }) {
   const formatter = new Intl.NumberFormat('de-DE', {
@@ -6,5 +7,9 @@ export default function Total({ sum }) {
     maximumFractionDigits: 2,
   });
 
-  return <div aria-label="sum">{formatter.format(sum)} €</div>;
+  return (
+    <div id="sum" aria-label="sum">
+      {formatter.format(sum)} €
+    </div>
+  );
 }

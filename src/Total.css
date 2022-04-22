@@ -1,0 +1,16 @@
+#sum {
+  position: relative;
+  width: 923px;
+  height: 225px;
+  margin-top: 168px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 192px;
+  line-height: 225px;
+
+  /* identical to box height */
+
+  color: #FFFFFF;
+}

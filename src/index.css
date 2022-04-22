@@ -2,6 +2,10 @@
   background: #000000;
   color: #FFFFFF;
   overflow: hidden;
+  padding-left: 36px;
+  padding-top: 40px;
+  padding-right: 38px;
+  padding-bottom: 35px;
 }
 
 body {
