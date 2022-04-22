@@ -1,5 +1,5 @@
 
-#ellipse20 {
+#ellipse1 {
   border-radius: 50%;
   position: absolute;
   width: 795.01px;
@@ -11,7 +11,7 @@
   transform: rotate(-17deg);
 }
 
-#ellipse21 {
+#ellipse2 {
   border-radius: 50%;
   position: absolute;
   width: 795.01px;
@@ -23,7 +23,7 @@
   transform: rotate(-17deg);
 }
 
-#ellipse22 {
+#ellipse3 {
   border-radius: 50%;
   position: absolute;
   width: 795.01px;
@@ -36,10 +36,11 @@
 }
 
 #group24 {
+  position: absolute;
   width: 1250.4px;
   height: 1234.97px;
-  left: 998px;
-  top: -218.42px;
+  left: 0px;
+  top: 0px;
   transform: rotate(-17deg);
   z-index: 0;
 }
