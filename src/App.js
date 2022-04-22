@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import config from './config';
 import { load } from './helpers/spreadsheet';
@@ -8,30 +7,20 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // 1. Load the JavaScript client library.
-    window.gapi.load('client:auth2', initClient);
+    window.gapi.load('client', initClient);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onLoad = (data, error) => {
-    if (data) {
-      setData(data);
-    } else {
-      setData(error);
-    }
+    setData(data ? data : error);
   };
 
-  const initClient = () => {
-    // 2. Initialize the JavaScript client library.
-    window.gapi.client
-      .init({
-        apiKey: config.apiKey,
-        // Your API key will be automatically added to the Discovery Document URLs.
-        discoveryDocs: config.discoveryDocs,
-      })
-      .then(() => {
-        // 3. Initialize and make the API request.
-        load(onLoad);
-      });
+  const initClient = async () => {
+    await window.gapi.client.init({
+      apiKey: config.apiKey,
+      discoveryDocs: config.discoveryDocs,
+    });
+    load(onLoad);
   };
 
   console.log(data);
@@ -39,10 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>{JSON.stringify(data)}</p>
       </header>
     </div>
   );
