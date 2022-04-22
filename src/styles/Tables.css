@@ -10,6 +10,16 @@
   flex-grow: 1;
 }
 
+.tables-container {
+  position: relative;
+  left: -36px;
+  width: calc(100% + 72px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: pink; */
+}
+
 .table-container{
   margin-top: 59px;
   display: inline-block;
@@ -18,7 +28,6 @@
   padding-top: 27px;
   padding-left: 36px;
   padding-right: 35px;
-  
 }
 
 table{
@@ -51,6 +60,7 @@ tbody tr:first-child td{
 td {
   font-style: normal;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .bold {
@@ -67,3 +77,9 @@ td {
   height: 18px;
 
 }
+
+/* .flex-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */

@@ -25,6 +25,6 @@
 .refresh-container{
   position: absolute;
   top: 0px;
-  right: 38px; 
+  right: 0px; 
   z-index: 1;
 }

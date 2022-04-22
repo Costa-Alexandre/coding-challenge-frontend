@@ -11,13 +11,13 @@ export default function ProgressBar({
   const progressWidthStyle = { width: `${progress * 100}%` };
 
   return (
-    <>
+    <div id="progress-bar-container">
       <div className="gray bar"></div>
       <div className="blue bar" style={progressWidthStyle}></div>
       <div className="value" style={targetLeftStyle}>
         {currencyFormat(currentTarget, 0)}
       </div>
       <div className="mark" style={targetLeftStyle}></div>
-    </>
+    </div>
   );
 }

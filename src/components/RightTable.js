@@ -13,7 +13,7 @@ export default function RightTable() {
         </thead>
         <tbody>
           <tr>
-            <td>White Flower Perfu...</td>
+            <td>White Flower Perfume</td>
             <td>
               <div className="blue-bar"></div>
             </td>
