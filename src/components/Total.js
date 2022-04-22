@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Total.css';
+import '../styles/Total.css';
 import currencyFormat from '../helpers/currencyFormat';
 
 export default function Total({ sum }) {

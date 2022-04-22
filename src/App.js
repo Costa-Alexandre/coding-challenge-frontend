@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import config from './config';
 import { loadOrders, loadTargets } from './helpers/spreadsheet';
-import './App.css';
+import './styles/App.css';
 import {
   NavBar,
   RefreshCounter,

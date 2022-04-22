@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Arrows.css';
+import '../styles/Arrows.css';
 
 export default function Arrows({ callback }) {
   return (

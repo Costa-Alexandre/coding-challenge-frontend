@@ -1,6 +1,6 @@
 import React from 'react';
 import Arrows from './Arrows';
-import '../NavBar.css';
+import '../styles/NavBar.css';
 
 export default function NavBar({ month, year, callback }) {
   const handleClick = (direction) => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../RefreshCounter.css';
+import '../styles/RefreshCounter.css';
 
 export default function RefreshCounter() {
   const [counter, setCounter] = useState(60);
