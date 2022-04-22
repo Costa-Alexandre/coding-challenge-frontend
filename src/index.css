@@ -1,56 +1,10 @@
 :root{
   background: #000000;
   color: #FFFFFF;
-  max-width: 1728px;
-  height: 1117px;
   overflow: hidden;
 }
 
 body {
   margin: 0;
 
-}
-
-#ellipse20 {
-  border-radius: 50%;
-  position: absolute;
-  width: 795.01px;
-  height: 795.01px;
-  left: 1086.01px;
-  top: 69.45px;
-
-  background: linear-gradient(251.89deg, #98255F 15.71%, rgba(30, 26, 28, 0.52) 80.03%);
-  transform: rotate(-17deg);
-}
-
-#ellipse21 {
-  border-radius: 50%;
-  position: absolute;
-  width: 795.01px;
-  height: 795.01px;
-  left: 1326.47px;
-  top: -318.84px;
-
-  background: linear-gradient(17deg, #98255F 21.65%, rgba(30, 26, 28, 0.52) 70.64%);
-  transform: rotate(-17deg);
-}
-
-#ellipse22 {
-  border-radius: 50%;
-  position: absolute;
-  width: 795.01px;
-  height: 795.01px;
-  left: 1562.13px;
-  top: 69.17px;
-
-  background: linear-gradient(156.67deg, #98255F 14.94%, rgba(30, 26, 28, 0.52) 62.89%);
-  transform: rotate(-17deg);
-}
-
-#group24 {
-  width: 1250.4px;
-  height: 1234.97px;
-  left: 998px;
-  top: -218.42px;
-  transform: rotate(-17deg);
 }

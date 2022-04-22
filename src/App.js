@@ -9,6 +9,7 @@ import {
   LeftTable,
   RightTable,
 } from './components';
+import Background from './components/Background';
 
 function App() {
   const [orders, setOrders] = useState([]);
@@ -59,11 +60,7 @@ function App() {
       <LeftTable />
       <RightTable />
 
-      <div id="group24">
-        <div id="ellipse20"></div>
-        <div id="ellipse21"></div>
-        <div id="ellipse22"></div>
-      </div>
+      <Background />
     </div>
   );
 }
