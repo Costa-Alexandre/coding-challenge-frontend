@@ -1,3 +1,12 @@
 .App {
   position: relative;
 }
+
+.tables-container {
+  position: relative;
+  left: -36px;
+  width: calc(100% + 72px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

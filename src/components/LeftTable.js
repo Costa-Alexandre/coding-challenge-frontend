@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/LeftTable.css';
+import '../styles/Tables.css';
 
 export default function LeftTable() {
   return (

@@ -67,8 +67,10 @@ function App() {
           maxTarget={maxTarget}
           currentTarget={currentTarget}
         />
-        <LeftTable />
-        <RightTable />
+        <div className="tables-container">
+          <LeftTable />
+          <RightTable />
+        </div>
       </div>
     </>
   );

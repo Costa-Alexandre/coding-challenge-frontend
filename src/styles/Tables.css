@@ -1,7 +1,13 @@
 #left-table {
   position: relative;
   min-width: 748px;
-  left: -36px;
+  margin-right: 17px;
+}
+
+#right-table {
+  position: relative;
+  min-width: 748px;
+  flex-grow: 1;
 }
 
 .table-container{
@@ -53,4 +59,11 @@ td {
 
 .right-align {
   text-align: right;
+}
+
+.blue-bar {
+  background-color: #2066D2;
+  width: 500px;
+  height: 18px;
+
 }
