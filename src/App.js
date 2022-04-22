@@ -32,11 +32,13 @@ function App() {
     });
   };
 
+  let sum = 5237.27;
+
   return (
     <div className="App">
       <NavBar />
       <RefreshCounter />
-      <Total />
+      <Total sum={sum} />
       <ProgressBar />
       <LeftTable />
       <RightTable />
