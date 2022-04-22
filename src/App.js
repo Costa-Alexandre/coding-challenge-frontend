@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import config from './config';
 import { loadOrders, loadTargets } from './helpers/spreadsheet';
+import './App.css';
 import {
   NavBar,
   RefreshCounter,
@@ -38,6 +39,9 @@ function App() {
     month: 'January',
     year: '2021',
   };
+  let progress = 0.52;
+  let maxTarget = 120000;
+  let currentTarget = 100000;
 
   const changeMonth = (direction) => {
     if (direction === 'prev') {
@@ -56,7 +60,11 @@ function App() {
       />
       <RefreshCounter />
       <Total sum={sum} />
-      <ProgressBar />
+      <ProgressBar
+        progress={progress}
+        maxTarget={maxTarget}
+        currentTarget={currentTarget}
+      />
       <LeftTable />
       <RightTable />
 
