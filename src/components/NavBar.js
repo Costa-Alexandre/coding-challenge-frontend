@@ -4,11 +4,8 @@ import '../NavBar.css';
 
 export default function NavBar({ month, year, callback }) {
   const handleClick = (direction) => {
-    if (direction === 'prev') {
-      callback('prev');
-    } else if (direction === 'next') {
-      callback('next');
-    }
+    console.log(direction, 'from navbar');
+    return callback(direction);
   };
 
   return (
