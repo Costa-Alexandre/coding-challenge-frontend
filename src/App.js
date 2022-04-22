@@ -52,24 +52,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <NavBar
-        month={monthYY.month}
-        year={monthYY.year}
-        callback={(direction) => changeMonth(direction)}
-      />
-      <RefreshCounter />
-      <Total sum={sum} />
-      <ProgressBar
-        progress={progress}
-        maxTarget={maxTarget}
-        currentTarget={currentTarget}
-      />
-      <LeftTable />
-      <RightTable />
-
+    <>
       <Background />
-    </div>
+      <div className="App">
+        <NavBar
+          month={monthYY.month}
+          year={monthYY.year}
+          callback={(direction) => changeMonth(direction)}
+        />
+        <RefreshCounter />
+        <Total sum={sum} />
+        <ProgressBar
+          progress={progress}
+          maxTarget={maxTarget}
+          currentTarget={currentTarget}
+        />
+        <LeftTable />
+        <RightTable />
+      </div>
+    </>
   );
 }
 
