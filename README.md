@@ -1,3 +1,16 @@
+# Getting Started with Orders-Dashboard-v2 App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Run locally
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 # AM Coding Challenge - Frontend (React)
 
 ## The case study: Product Order Dashboard
@@ -26,10 +39,9 @@ As an employee at BLACK PRODUCTS Inc.,
 - [ ] I want to see the top 5 products for the time period
 - [ ] For each top product, I want to see
   - [ ] the name of the product
-  - [ ] the sum of all orders of that product 
+  - [ ] the sum of all orders of that product
   - [ ] a progress bar to display the percentage that the product had on the total order volume
 - [ ] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
-
 
 ## Your Mission
 
