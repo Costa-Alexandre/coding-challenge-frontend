@@ -38,9 +38,21 @@ function App() {
     year: '2021',
   };
 
+  const changeMonth = (direction) => {
+    if (direction === 'prev') {
+      console.log('prev');
+    } else if (direction === 'next') {
+      console.log('next');
+    }
+  };
+
   return (
     <div className="App">
-      <NavBar month={monthYY.month} year={monthYY.year} />
+      <NavBar
+        month={monthYY.month}
+        year={monthYY.year}
+        callback={(direction) => changeMonth(direction)}
+      />
       <RefreshCounter />
       <Total sum={sum} />
       <ProgressBar />
