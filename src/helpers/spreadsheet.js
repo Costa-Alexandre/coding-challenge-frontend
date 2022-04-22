@@ -1,25 +1,23 @@
 import config from '../config';
-/**
- * Load the cars from the spreadsheet
- * Get the right values from it and assign.
- */
+
 export function load(callback) {
-  window.gapi.client.load('sheets', 'v4', () => {
-    window.gapi.client.sheets.spreadsheets.values
-      .get({
+  window.gapi.client.load('sheets', 'v4', async () => {
+    try {
+      const response = await window.gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: config.spreadsheetId,
-        range: 'Orders!A1:D1000',
-      })
-      .then(
-        (response) => {
-          const data = response.result.values;
-          callback({
-            data,
-          });
-        },
-        (response) => {
-          callback(false, response.result.error);
-        },
-      );
+        range: 'Orders!A2:D1000',
+      });
+      const data = response.result.values;
+      const orders = data.map((order) => ({
+        orderNumber: order[0],
+        orderDate: order[1],
+        product: order[2],
+        orderVolume: order[3],
+      }));
+
+      callback({ orders });
+    } catch (error) {
+      callback(false, error.result);
+    }
   });
 }
