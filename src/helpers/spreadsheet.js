@@ -1,6 +1,6 @@
 import config from '../config';
 
-export function load(callback) {
+export function loadOrders(callback) {
   window.gapi.client.load('sheets', 'v4', async () => {
     try {
       const response = await window.gapi.client.sheets.spreadsheets.values.get({
@@ -15,7 +15,27 @@ export function load(callback) {
         orderVolume: order[3],
       }));
 
-      callback({ orders });
+      callback(orders);
+    } catch (error) {
+      callback(false, error.result);
+    }
+  });
+}
+
+export function loadTargets(callback) {
+  window.gapi.client.load('sheets', 'v4', async () => {
+    try {
+      const response = await window.gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: config.spreadsheetId,
+        range: 'Targets!A2:B13',
+      });
+      const data = response.result.values;
+      const targets = data.map((target) => ({
+        month: target[0],
+        target: target[1],
+      }));
+
+      callback(targets);
     } catch (error) {
       callback(false, error.result);
     }
