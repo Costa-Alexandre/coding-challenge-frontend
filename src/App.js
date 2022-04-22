@@ -33,10 +33,14 @@ function App() {
   };
 
   let sum = 5237.27;
+  let monthYY = {
+    month: 'January',
+    year: '2021',
+  };
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar month={monthYY.month} year={monthYY.year} />
       <RefreshCounter />
       <Total sum={sum} />
       <ProgressBar />

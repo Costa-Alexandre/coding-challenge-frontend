@@ -1,0 +1,43 @@
+.arrow {
+  border: solid #C4C4C4;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
+
+.square {
+  width: 33px;
+  height: 33px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  transform: rotate(-45deg) translate(-2px, -2px);
+  -webkit-transform: rotate(-45deg) translate(-2px, -2px);
+}
+
+.left {
+  transform: rotate(135deg) translate(-2px, -2px);
+  -webkit-transform: rotate(135deg) translate(-2px, -2px);
+}
+
+#arrows-container {
+  display: flex;
+  flex-direction: row;
+  width: 115px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.arrow-buttons {
+padding: 10px;
+width: 53px;
+height: 53px;
+
+background: #26262C;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 5px;
+}
