@@ -1,0 +1,19 @@
+#sum {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 225px;
+  
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 192px;
+  line-height: 225px;
+  white-space: nowrap;
+
+  color: #FFFFFF;
+}

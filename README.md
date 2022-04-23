@@ -1,3 +1,20 @@
+# Getting Started with Orders-Dashboard-v2 App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Live app
+
+This project was deployed to [Vercel](https://coding-challenge-frontend-react-acvb514h3-costa-alexandre.vercel.app/).
+
+## Run locally
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 # AM Coding Challenge - Frontend (React)
 
 ## The case study: Product Order Dashboard
@@ -13,23 +30,22 @@ The orders are stored in a Google sheet and need to be displayed using the [Goog
 
 As an employee at BLACK PRODUCTS Inc.,
 
-- [ ] I want to see the sum of all orders for a given month
-- [ ] I want to be able to filter by month
-- [ ] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
-- [ ] I want to see the target value
-- [ ] I want to see the 5 most recent orders in the selected month
-- [ ] For each order, I want to see
-  - [ ] the order number
-  - [ ] the order date
-  - [ ] the product name
-  - [ ] the order volume
-- [ ] I want to see the top 5 products for the time period
-- [ ] For each top product, I want to see
-  - [ ] the name of the product
-  - [ ] the sum of all orders of that product 
-  - [ ] a progress bar to display the percentage that the product had on the total order volume
-- [ ] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
-
+- [x] I want to see the sum of all orders for a given month
+- [x] I want to be able to filter by month
+- [x] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
+- [x] I want to see the target value
+- [x] I want to see the 5 most recent orders in the selected month
+- [x] For each order, I want to see
+  - [x] the order number
+  - [x] the order date
+  - [x] the product name
+  - [x] the order volume
+- [x] I want to see the top 5 products for the time period
+- [x] For each top product, I want to see
+  - [x] the name of the product
+  - [x] the sum of all orders of that product
+  - [x] a progress bar to display the percentage that the product had on the total order volume
+- [x] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
 
 ## Your Mission
 
