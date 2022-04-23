@@ -8,7 +8,9 @@ export default function ProgressBar({
   currentTarget,
 }) {
   const targetLeftStyle = { left: `${(currentTarget / maxTarget) * 100}%` };
-  const progressWidthStyle = { width: `${progress * 100}%` };
+  const progressWidthStyle = {
+    width: `${progress * 100 * (currentTarget / maxTarget)}%`,
+  };
 
   return (
     <div id="progress-bar-container">
