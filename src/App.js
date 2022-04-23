@@ -8,6 +8,7 @@ import {
   ProgressBar,
   LeftTable,
   RightTable,
+  Loading,
 } from './components';
 import Background from './components/Background';
 import {
@@ -78,6 +79,7 @@ function App() {
           ),
         ),
       );
+      setIsLoading(false);
     }
   }, [orders, currentMonth]);
 
@@ -109,24 +111,28 @@ function App() {
   return (
     <>
       <Background />
-      <div className="App">
-        <NavBar
-          currentMonth={currentMonth}
-          callback={(direction) => changeMonth(direction)}
-          intervalArray={intervalArray}
-        />
-        <RefreshCounter callback={refresh} />
-        <Total sum={sumOrders} />
-        <ProgressBar
-          progress={progress}
-          maxTarget={maxTarget}
-          currentTarget={currentTarget}
-        />
-        <div className="tables-container">
-          <LeftTable orders={topRecentOrders} />
-          <RightTable orders={topOrders} sumOrders={sumOrders} />
+      {!isLoading ? (
+        <div className="App">
+          <NavBar
+            currentMonth={currentMonth}
+            callback={(direction) => changeMonth(direction)}
+            intervalArray={intervalArray}
+          />
+          <RefreshCounter callback={refresh} />
+          <Total sum={sumOrders} />
+          <ProgressBar
+            progress={progress}
+            maxTarget={maxTarget}
+            currentTarget={currentTarget}
+          />
+          <div className="tables-container">
+            <LeftTable orders={topRecentOrders} />
+            <RightTable orders={topOrders} sumOrders={sumOrders} />
+          </div>
         </div>
-      </div>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 }
