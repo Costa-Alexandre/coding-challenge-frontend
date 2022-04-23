@@ -9,7 +9,7 @@ export default function RightTable({ orders, sumOrders }) {
         <td>
           <div
             className="blue-bar"
-            style={{ width: `calc(${order.orderVolume / sumOrders} * 400px)` }}
+            style={{ width: `calc(${order.orderVolume / sumOrders} * 100%)` }}
           ></div>
         </td>
         <td className="right-align bold">
@@ -24,8 +24,8 @@ export default function RightTable({ orders, sumOrders }) {
       <table>
         <thead>
           <tr>
-            <th>TOP 5 PRODUCTS</th>
-            <th></th>
+            <th style={{ width: '15%' }}>TOP 5 PRODUCTS</th>
+            <th style={{ width: '70%' }}></th>
             <th></th>
           </tr>
         </thead>
