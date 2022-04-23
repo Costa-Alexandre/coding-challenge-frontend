@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live app
 
-This project was deployed to [Vercel](https://coding-challenge-frontend-react-acvb514h3-costa-alexandre.vercel.app/).
+This project was deployed to [Vercel](https://coding-challenge-frontend-react-git-main-costa-alexandre.vercel.app/).
 
 ## Run locally
 
