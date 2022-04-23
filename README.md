@@ -26,7 +26,7 @@ The orders are stored in a Google sheet and need to be displayed using the [Goog
 
 As an employee at BLACK PRODUCTS Inc.,
 
-- [ ] I want to see the sum of all orders for a given month
+- [x] I want to see the sum of all orders for a given month
 - [ ] I want to be able to filter by month
 - [ ] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
 - [ ] I want to see the target value
@@ -41,7 +41,7 @@ As an employee at BLACK PRODUCTS Inc.,
   - [ ] the name of the product
   - [ ] the sum of all orders of that product
   - [ ] a progress bar to display the percentage that the product had on the total order volume
-- [ ] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
+- [x] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
 
 ## Your Mission
 
