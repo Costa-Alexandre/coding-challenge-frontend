@@ -12,10 +12,14 @@ export default function NavBar({ currentMonth, callback, intervalArray }) {
   };
 
   useEffect(() => {
-    currentMonth < intervalArray[0].orderDate
+    currentMonth.getMonth() === intervalArray[0].getMonth() &&
+    currentMonth.getFullYear() === intervalArray[0].getFullYear()
       ? setDisablePrev(true)
       : setDisablePrev(false);
-    currentMonth > intervalArray[intervalArray.length - 1].orderDate
+    currentMonth.getMonth() ===
+      intervalArray[intervalArray.length - 1].getMonth() &&
+    currentMonth.getFullYear() ===
+      intervalArray[intervalArray.length - 1].getFullYear()
       ? setDisableNext(true)
       : setDisableNext(false);
   }, [intervalArray, currentMonth]);
