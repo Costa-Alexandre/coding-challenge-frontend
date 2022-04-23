@@ -39,6 +39,7 @@ table{
   border-collapse: collapse;
   color: #E8E8E8;
   text-align: left;
+  white-space: nowrap;
 }
 
 
@@ -60,7 +61,6 @@ tbody tr:first-child td{
 td {
   font-style: normal;
   font-weight: 500;
-  white-space: nowrap;
 }
 
 .bold {
@@ -77,9 +77,3 @@ td {
   height: 18px;
 
 }
-
-/* .flex-child {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
