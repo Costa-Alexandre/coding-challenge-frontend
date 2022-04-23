@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { dateToDDMMYYYY } from '../helpers/dateFormat';
 import { currencyFormat } from '../helpers/currencyFormat';
 import '../styles/Tables.css';
 
 export default function LeftTable({ orders }) {
-  useEffect(() => {
-    console.log('filtered orders', orders);
-  }, [orders]);
-
   const tableRows = orders.map((order, index) => {
     return (
       <tr key={index}>
