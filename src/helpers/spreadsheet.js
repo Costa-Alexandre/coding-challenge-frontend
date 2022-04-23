@@ -1,4 +1,6 @@
 import config from '../config';
+import { toFloat } from './currencyFormat';
+import { toDate, getMonthFromString } from './dateFormat';
 
 export function loadOrders(callback) {
   let obj = [];
@@ -11,9 +13,9 @@ export function loadOrders(callback) {
       const data = response.result.values;
       const orders = data.map((order) => ({
         orderNumber: order[0],
-        orderDate: order[1],
+        orderDate: toDate(order[1]),
         product: order[2],
-        orderVolume: order[3],
+        orderVolume: toFloat(order[3]),
       }));
 
       obj.push(orders);
@@ -28,8 +30,8 @@ export function loadOrders(callback) {
       });
       const data = response.result.values;
       const targets = data.map((target) => ({
-        month: target[0],
-        target: target[1],
+        month: getMonthFromString(target[0]),
+        target: toFloat(target[1]),
       }));
 
       obj.push(targets);
