@@ -127,7 +127,7 @@ function App() {
         />
         <div className="tables-container">
           <LeftTable orders={filteredOrders} />
-          <RightTable orders={topOrders} />
+          <RightTable orders={topOrders} sumOrders={sumOrders} />
         </div>
       </div>
     </>

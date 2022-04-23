@@ -37,10 +37,10 @@ As an employee at BLACK PRODUCTS Inc.,
   - [x] the product name
   - [x] the order volume
 - [x] I want to see the top 5 products for the time period
-- [ ] For each top product, I want to see
+- [x] For each top product, I want to see
   - [x] the name of the product
   - [x] the sum of all orders of that product
-  - [ ] a progress bar to display the percentage that the product had on the total order volume
+  - [x] a progress bar to display the percentage that the product had on the total order volume
 - [x] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
 
 ## Your Mission
