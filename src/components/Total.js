@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Total.css';
-import currencyFormat from '../helpers/currencyFormat';
+import { currencyFormat } from '../helpers/currencyFormat';
 
 export default function Total({ sum }) {
   return (
