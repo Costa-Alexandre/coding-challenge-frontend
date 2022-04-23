@@ -10,7 +10,11 @@ import {
   RightTable,
 } from './components';
 import Background from './components/Background';
-import { filterOrdersMonth, getOrdersMonth } from './helpers/filterFunc';
+import {
+  filterOrdersMonth,
+  getOrdersMonth,
+  topOrdersArray,
+} from './helpers/filterFunc';
 import { createOrdersInterval } from './helpers/timeRange';
 
 function App() {
@@ -23,6 +27,8 @@ function App() {
   const [sumOrders, setSumOrders] = useState(0);
   const [progress, setProgress] = useState(0);
   const [filteredOrders, setFilteredOrders] = useState([]);
+  const [topOrders, setTopOrders] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
     await loadData((result, error) => {
@@ -60,6 +66,13 @@ function App() {
         ),
         setFilteredOrders(
           filterOrdersMonth(
+            orders,
+            currentMonth.getMonth() + 1,
+            currentMonth.getFullYear(),
+          ),
+        ),
+        setTopOrders(
+          topOrdersArray(
             orders,
             currentMonth.getMonth() + 1,
             currentMonth.getFullYear(),
@@ -114,7 +127,7 @@ function App() {
         />
         <div className="tables-container">
           <LeftTable orders={filteredOrders} />
-          <RightTable />
+          <RightTable orders={topOrders} />
         </div>
       </div>
     </>

@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { currencyFormat } from '../helpers/currencyFormat';
 
-export default function RightTable() {
+export default function RightTable({ orders }) {
+  useEffect(() => {
+    console.log('top orders', orders);
+  }, [orders]);
+
+  const tableRows = orders.map((order, index) => {
+    return (
+      <tr key={index}>
+        <td>{order.product}</td>
+        <td>
+          <div className="blue-bar"></div>
+        </td>
+        <td className="right-align bold">
+          {currencyFormat(order.orderVolume)}
+        </td>
+      </tr>
+    );
+  });
+
   return (
     <div id="right-table" className="table-container">
       <table>
@@ -11,22 +30,7 @@ export default function RightTable() {
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>White Flower Perfume</td>
-            <td>
-              <div className="blue-bar"></div>
-            </td>
-            <td className="bold right-align">5.101,94 €</td>
-          </tr>
-          <tr>
-            <td>Black Sand Perfume</td>
-            <td>
-              <div className="blue-bar"></div>
-            </td>
-            <td className="bold right-align">135,33 €</td>
-          </tr>
-        </tbody>
+        <tbody>{tableRows}</tbody>
       </table>
     </div>
   );
