@@ -81,6 +81,7 @@ function App() {
       );
       setIsLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [orders, currentMonth]);
 
   useEffect(() => {
