@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { currencyFormat } from '../helpers/currencyFormat';
 
 export default function RightTable({ orders, sumOrders }) {
-  useEffect(() => {
-    console.log('top orders', orders);
-  }, [orders]);
-
-  // const progressWidthStyle = { width: `${progress * 100}%` };
-
   const tableRows = orders.map((order, index) => {
     return (
       <tr key={index}>
