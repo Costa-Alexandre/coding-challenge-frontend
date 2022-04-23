@@ -4,7 +4,14 @@ const sumOrders = (orders) => {
   return orders.reduce((acc, order) => acc + order.orderVolume, 0);
 };
 
-const filterOrdersMonth = (orders, month, year) => {
+const filterOrdersMonth = (orders, month, year) =>
+  orders.filter(
+    (order) =>
+      order.orderDate.getMonth() + 1 === month &&
+      order.orderDate.getFullYear() === year,
+  );
+
+const getTopRecentOrders = (orders, month, year) => {
   const monthOrders = orders.filter(
     (order) =>
       order.orderDate.getMonth() + 1 === month &&
@@ -49,4 +56,10 @@ const aggregateOrders = (orders) => {
   return uniqueProductsOrders;
 };
 
-export { sumOrders, filterOrdersMonth, getOrdersMonth, topOrdersArray };
+export {
+  sumOrders,
+  filterOrdersMonth,
+  getOrdersMonth,
+  topOrdersArray,
+  getTopRecentOrders,
+};

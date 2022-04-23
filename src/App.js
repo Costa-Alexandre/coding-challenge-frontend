@@ -11,9 +11,9 @@ import {
 } from './components';
 import Background from './components/Background';
 import {
-  filterOrdersMonth,
   getOrdersMonth,
   topOrdersArray,
+  getTopRecentOrders,
 } from './helpers/filterFunc';
 import { createOrdersInterval } from './helpers/timeRange';
 
@@ -26,7 +26,7 @@ function App() {
   const [intervalArray, setIntervalArray] = useState([new Date(2000, 0, 1)]);
   const [sumOrders, setSumOrders] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [filteredOrders, setFilteredOrders] = useState([]);
+  const [topRecentOrders, setTopRecentOrders] = useState([]);
   const [topOrders, setTopOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -64,8 +64,8 @@ function App() {
           currentMonth.getMonth() + 1,
           currentMonth.getFullYear(),
         ),
-        setFilteredOrders(
-          filterOrdersMonth(
+        setTopRecentOrders(
+          getTopRecentOrders(
             orders,
             currentMonth.getMonth() + 1,
             currentMonth.getFullYear(),
@@ -126,7 +126,7 @@ function App() {
           currentTarget={currentTarget}
         />
         <div className="tables-container">
-          <LeftTable orders={filteredOrders} />
+          <LeftTable orders={topRecentOrders} />
           <RightTable orders={topOrders} sumOrders={sumOrders} />
         </div>
       </div>
