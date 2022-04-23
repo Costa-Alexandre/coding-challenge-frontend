@@ -23,8 +23,8 @@ function App() {
   const [targets, setTargets] = useState([]);
   const [currentTarget, setCurrentTarget] = useState(100000);
   const [maxTarget, setMaxTarget] = useState(120000);
-  const [currentMonth, setCurrentMonth] = useState(new Date(2000, 0, 1));
-  const [intervalArray, setIntervalArray] = useState([new Date(2000, 0, 1)]);
+  const [currentMonth, setCurrentMonth] = useState(new Date(2022, 1, 1));
+  const [intervalArray, setIntervalArray] = useState([new Date(2022, 1, 1)]);
   const [sumOrders, setSumOrders] = useState(0);
   const [progress, setProgress] = useState(0);
   const [topRecentOrders, setTopRecentOrders] = useState([]);
