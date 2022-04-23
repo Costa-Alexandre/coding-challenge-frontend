@@ -22,4 +22,12 @@ const createArrayMonths = (firstMonth, periods) => {
   return arrayMonths;
 };
 
-export { sortDates, monthsDiff, createArrayMonths };
+const createOrdersInterval = (orders) => {
+  const sortedDates = sortDates(orders);
+  const firstMonth = sortedDates[0].orderDate;
+  const lastMonth = sortedDates[sortedDates.length - 1].orderDate;
+  const periods = monthsDiff(firstMonth, lastMonth);
+  return createArrayMonths(firstMonth, periods);
+};
+
+export { sortDates, monthsDiff, createArrayMonths, createOrdersInterval };
