@@ -53,7 +53,6 @@ function App() {
   useEffect(() => {
     if (orders.length > 0) {
       setIntervalArray(createOrdersInterval(orders));
-      console.log('interval', intervalArray);
       currentMonth < intervalArray[0] ||
       currentMonth > intervalArray[intervalArray.length - 1]
         ? setCurrentMonth(intervalArray[0])
@@ -89,7 +88,6 @@ function App() {
       );
       setCurrentTarget(t.target);
       setMaxTarget(Math.max(...targets.map((target) => target.target)));
-      // console.log(currentTarget, maxTarget);
     }
   }, [targets, currentMonth]);
 
@@ -101,7 +99,6 @@ function App() {
 
   const changeMonth = (direction) => {
     let month = currentMonth.getMonth();
-    console.log(month);
     if (direction === 'prev') {
       setCurrentMonth(new Date(currentMonth.getFullYear(), month - 1, 1));
     } else if (direction === 'next') {
