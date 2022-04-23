@@ -30,7 +30,7 @@ As an employee at BLACK PRODUCTS Inc.,
 - [x] I want to be able to filter by month
 - [x] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
 - [x] I want to see the target value
-- [ ] I want to see the 5 most recent orders in the selected month
+- [x] I want to see the 5 most recent orders in the selected month
 - [x] For each order, I want to see
   - [x] the order number
   - [x] the order date
