@@ -70,7 +70,7 @@ function App() {
       setMaxTarget(Math.max(...targets.map((target) => target.target)));
       // console.log(currentTarget, maxTarget);
     }
-  }, [targets]);
+  }, [targets, currentMonth]);
 
   useEffect(() => {
     if (currentTarget > 0) {
