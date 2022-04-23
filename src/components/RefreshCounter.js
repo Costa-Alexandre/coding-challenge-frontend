@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/RefreshCounter.css';
 
-export default function RefreshCounter() {
+export default function RefreshCounter({ callback }) {
   const [counter, setCounter] = useState(60);
 
   useEffect(() => {
@@ -11,14 +11,14 @@ export default function RefreshCounter() {
         if (counter > 1) {
           setCounter(counter - 1);
         } else if (counter === 1) {
-          console.log('refresh');
           setCounter(60);
+          callback();
         }
       }, 1000);
     return () => {
       clearInterval(timer);
     };
-  }, [counter]);
+  }, [counter, callback]);
 
   return (
     <div className="refresh-container">

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { initClient } from './helpers/spreadsheet';
+import { useCallback, useEffect, useState } from 'react';
+import { loadData } from './helpers/spreadsheet';
 import './styles/App.css';
 import {
   NavBar,
@@ -15,9 +15,31 @@ function App() {
   const [orders, setOrders] = useState([]);
   const [targets, setTargets] = useState([]);
 
+  const fetchData = async () => {
+    await loadData((result, error) => {
+      if (result) {
+        setOrders(result[0]);
+        setTargets(result[1]);
+      } else {
+        console.error(error);
+      }
+    });
+  };
+
   useEffect(() => {
-    window.gapi.load('client', initClient);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (orders.length > 0) {
+      console.log('orders', orders);
+      console.log('targets', targets);
+    }
+  }, [orders, targets]);
+
+  const refresh = useCallback(() => {
+    console.log('refresh');
+    fetchData();
   }, []);
 
   let sum = 5237.27;
@@ -46,7 +68,7 @@ function App() {
           year={monthYY.year}
           callback={(direction) => changeMonth(direction)}
         />
-        <RefreshCounter />
+        <RefreshCounter callback={refresh} />
         <Total sum={sum} />
         <ProgressBar
           progress={progress}

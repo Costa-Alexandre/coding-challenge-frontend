@@ -1,6 +1,7 @@
 import config from '../config';
 
 export function loadOrders(callback) {
+  let obj = [];
   window.gapi.client.load('sheets', 'v4', async () => {
     try {
       const response = await window.gapi.client.sheets.spreadsheets.values.get({
@@ -15,15 +16,11 @@ export function loadOrders(callback) {
         orderVolume: order[3],
       }));
 
-      callback(orders);
+      obj.push(orders);
     } catch (error) {
       callback(false, error.result);
     }
-  });
-}
 
-export function loadTargets(callback) {
-  window.gapi.client.load('sheets', 'v4', async () => {
     try {
       const response = await window.gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: config.spreadsheetId,
@@ -35,24 +32,22 @@ export function loadTargets(callback) {
         target: target[1],
       }));
 
-      callback(targets);
+      obj.push(targets);
     } catch (error) {
       callback(false, error.result);
     }
+    callback(obj);
   });
 }
 
-const initClient = async () => {
-  await window.gapi.client.init({
-    apiKey: config.apiKey,
-    discoveryDocs: config.discoveryDocs,
-  });
-  loadOrders((data, error) => {
-    console.log(data || error);
-  });
-  loadTargets((data, error) => {
-    console.log(data || error);
+const loadData = async (callback) => {
+  window.gapi.load('client', async () => {
+    await window.gapi.client.init({
+      apiKey: config.apiKey,
+      discoveryDocs: config.discoveryDocs,
+    });
+    loadOrders(callback);
   });
 };
 
-export { initClient };
+export { loadData };
