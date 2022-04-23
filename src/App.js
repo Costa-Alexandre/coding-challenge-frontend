@@ -14,6 +14,7 @@ import Background from './components/Background';
 function App() {
   const [orders, setOrders] = useState([]);
   const [targets, setTargets] = useState([]);
+  const [currentMonth, setCurrentMonth] = useState(new Date(2021, 0, 1));
 
   const fetchData = async () => {
     await loadData((result, error) => {
@@ -43,10 +44,6 @@ function App() {
   }, []);
 
   let sum = 5237.27;
-  let monthYY = {
-    month: 'January',
-    year: '2021',
-  };
   let progress = 0.52;
   let maxTarget = 120000;
   let currentTarget = 100000;
@@ -64,8 +61,7 @@ function App() {
       <Background />
       <div className="App">
         <NavBar
-          month={monthYY.month}
-          year={monthYY.year}
+          currentMonth={currentMonth}
           callback={(direction) => changeMonth(direction)}
         />
         <RefreshCounter callback={refresh} />
