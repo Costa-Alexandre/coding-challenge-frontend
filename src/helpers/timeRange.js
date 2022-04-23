@@ -27,7 +27,7 @@ const createOrdersInterval = (orders) => {
   const firstMonth = sortedDates[0].orderDate;
   const lastMonth = sortedDates[sortedDates.length - 1].orderDate;
   const periods = monthsDiff(firstMonth, lastMonth);
-  return createArrayMonths(firstMonth, periods);
+  return createArrayMonths(firstMonth, periods + 1);
 };
 
 export { sortDates, monthsDiff, createArrayMonths, createOrdersInterval };
