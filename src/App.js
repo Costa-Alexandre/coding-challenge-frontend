@@ -62,14 +62,13 @@ function App() {
   }, [orders, currentMonth]);
 
   useEffect(() => {
-    console.log(targets);
     if (targets.length > 0) {
       const t = targets.find(
         (target) => target.month === currentMonth.getMonth() + 1,
       );
       setCurrentTarget(t.target);
       setMaxTarget(Math.max(...targets.map((target) => target.target)));
-      console.log(currentTarget, maxTarget);
+      // console.log(currentTarget, maxTarget);
     }
   }, [targets]);
 
@@ -80,10 +79,12 @@ function App() {
   }, [currentTarget, sumOrders]);
 
   const changeMonth = (direction) => {
+    let month = currentMonth.getMonth();
+    console.log(month);
     if (direction === 'prev') {
-      console.log('prev');
+      setCurrentMonth(new Date(currentMonth.getFullYear(), month - 1, 1));
     } else if (direction === 'next') {
-      console.log('next');
+      setCurrentMonth(new Date(currentMonth.getFullYear(), month + 1, 1));
     }
   };
 
