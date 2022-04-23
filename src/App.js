@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import config from './config';
-import { loadOrders, loadTargets } from './helpers/spreadsheet';
+import { initClient, loadOrders, loadTargets } from './helpers/spreadsheet';
 import './styles/App.css';
 import {
   NavBar,
@@ -20,19 +20,6 @@ function App() {
     window.gapi.load('client', initClient);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const initClient = async () => {
-    await window.gapi.client.init({
-      apiKey: config.apiKey,
-      discoveryDocs: config.discoveryDocs,
-    });
-    loadOrders((data, error) => {
-      setOrders(data || error);
-    });
-    loadTargets((data, error) => {
-      setTargets(data || error);
-    });
-  };
 
   let sum = 5237.27;
   let monthYY = {

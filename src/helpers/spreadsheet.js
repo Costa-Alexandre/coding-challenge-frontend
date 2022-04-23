@@ -41,3 +41,18 @@ export function loadTargets(callback) {
     }
   });
 }
+
+const initClient = async () => {
+  await window.gapi.client.init({
+    apiKey: config.apiKey,
+    discoveryDocs: config.discoveryDocs,
+  });
+  loadOrders((data, error) => {
+    console.log(data || error);
+  });
+  loadTargets((data, error) => {
+    console.log(data || error);
+  });
+};
+
+export { initClient };
