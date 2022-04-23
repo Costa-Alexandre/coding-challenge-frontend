@@ -14,7 +14,7 @@ const monthsDiff = (oldMonth, newMonth) => {
 
 const createArrayMonths = (firstMonth, periods) => {
   const arrayMonths = [];
-  for (let i = -1; i < periods; i++) {
+  for (let i = 0; i < periods; i++) {
     arrayMonths.push(
       new Date(firstMonth.getFullYear(), firstMonth.getMonth() + i, 15),
     );
