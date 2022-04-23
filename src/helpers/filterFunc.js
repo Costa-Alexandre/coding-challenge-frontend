@@ -6,4 +6,8 @@ const filterOrdersMonth = (orders, month) => {
   return orders.filter((order) => order.orderDate.getMonth() + 1 === month);
 };
 
-export { sumOrders, filterOrdersMonth };
+const getOrdersMonth = (orders, month) => {
+  return sumOrders(filterOrdersMonth(orders, month));
+};
+
+export { sumOrders, filterOrdersMonth, getOrdersMonth };
