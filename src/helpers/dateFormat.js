@@ -7,4 +7,12 @@ const toMonthYYYY = (date) => {
   return date.toLocaleString('en-US', { month: 'long', year: 'numeric' });
 };
 
-export { toDate, toMonthYYYY };
+function getMonthFromString(mon) {
+  const d = Date.parse(mon + '1, 2012');
+  if (!isNaN(d)) {
+    return new Date(d).getMonth() + 1;
+  }
+  return -1;
+}
+
+export { toDate, toMonthYYYY, getMonthFromString };
