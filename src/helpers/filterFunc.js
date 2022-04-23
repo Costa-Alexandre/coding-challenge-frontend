@@ -1,8 +1,5 @@
 const sumOrders = (orders) => {
-  const result = orders.reduce((acc, order) => {
-    return acc + order.orderVolume;
-  }, 0);
-  return result;
+  return orders.reduce((acc, order) => acc + order.orderVolume, 0);
 };
 
 export { sumOrders };
