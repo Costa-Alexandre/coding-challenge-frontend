@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import config from './config';
-import { initClient, loadOrders, loadTargets } from './helpers/spreadsheet';
+import { initClient } from './helpers/spreadsheet';
 import './styles/App.css';
 import {
   NavBar,
