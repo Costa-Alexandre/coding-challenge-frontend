@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Tables.css';
 
-export default function LeftTable() {
+export default function LeftTable({ orders }) {
+  useEffect(() => {
+    console.log('filtered orders', orders);
+  }, [orders]);
+
   return (
     <div id="left-table" className="table-container">
       <table>
