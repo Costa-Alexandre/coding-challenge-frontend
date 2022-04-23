@@ -28,8 +28,8 @@ As an employee at BLACK PRODUCTS Inc.,
 
 - [x] I want to see the sum of all orders for a given month
 - [ ] I want to be able to filter by month
-- [ ] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
-- [ ] I want to see the target value
+- [x] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
+- [x] I want to see the target value
 - [ ] I want to see the 5 most recent orders in the selected month
 - [ ] For each order, I want to see
   - [ ] the order number

@@ -16,9 +16,12 @@ import { createOrdersInterval } from './helpers/timeRange';
 function App() {
   const [orders, setOrders] = useState([]);
   const [targets, setTargets] = useState([]);
+  const [currentTarget, setCurrentTarget] = useState(100000);
+  const [maxTarget, setMaxTarget] = useState(120000);
   const [currentMonth, setCurrentMonth] = useState(new Date(2000, 0, 1));
   const [intervalArray, setIntervalArray] = useState([new Date(2000, 0, 1)]);
   const [sumOrders, setSumOrders] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   const fetchData = async () => {
     await loadData((result, error) => {
@@ -31,6 +34,11 @@ function App() {
     });
   };
 
+  const refresh = useCallback(() => {
+    console.log('refresh');
+    fetchData();
+  }, []);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -38,15 +46,11 @@ function App() {
   useEffect(() => {
     if (orders.length > 0) {
       setIntervalArray(createOrdersInterval(orders));
-      // console.log('january', getOrdersMonth(orders, 1));
-      // console.log('orders', orders);
-      // console.log('targets', targets);
       console.log('interval', intervalArray);
       currentMonth < intervalArray[0] ||
       currentMonth > intervalArray[intervalArray.length - 1]
         ? setCurrentMonth(intervalArray[0])
         : setCurrentMonth(currentMonth);
-      // console.log(currentMonth);
       setSumOrders(
         getOrdersMonth(
           orders,
@@ -55,16 +59,25 @@ function App() {
         ),
       );
     }
-  }, [orders]);
+  }, [orders, currentMonth]);
 
-  const refresh = useCallback(() => {
-    console.log('refresh');
-    fetchData();
-  }, []);
+  useEffect(() => {
+    console.log(targets);
+    if (targets.length > 0) {
+      const t = targets.find(
+        (target) => target.month === currentMonth.getMonth() + 1,
+      );
+      setCurrentTarget(t.target);
+      setMaxTarget(Math.max(...targets.map((target) => target.target)));
+      console.log(currentTarget, maxTarget);
+    }
+  }, [targets]);
 
-  let progress = 0.52;
-  let maxTarget = 120000;
-  let currentTarget = 100000;
+  useEffect(() => {
+    if (currentTarget > 0) {
+      setProgress(sumOrders / currentTarget);
+    }
+  }, [currentTarget, sumOrders]);
 
   const changeMonth = (direction) => {
     if (direction === 'prev') {
