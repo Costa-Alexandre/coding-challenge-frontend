@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Live app
-
-This project was deployed to [Vercel](https://coding-challenge-frontend-react-acvb514h3-costa-alexandre.vercel.app/).
-
 ## Run locally
 
 In the project directory, you can run:
