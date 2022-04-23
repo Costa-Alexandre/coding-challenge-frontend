@@ -16,9 +16,7 @@ export default function RightTable({ orders, sumOrders }) {
           <div
             className="blue-bar"
             style={{ width: `calc(${order.orderVolume / sumOrders} * 400px)` }}
-          >
-            {order.orderVolume / sumOrders}
-          </div>
+          ></div>
         </td>
         <td className="right-align bold">
           {currencyFormat(order.orderVolume)}
