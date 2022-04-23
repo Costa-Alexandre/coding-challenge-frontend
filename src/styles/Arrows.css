@@ -51,8 +51,29 @@ z-index: 1;
   border: 1px solid #C4C4C4;
   }
 
-  .arrow-buttons:active {
-    transform: translate(1px, 1px);
-    transition: transform 0.1s;
-    background: #C4C4C440;
-  }
+.arrow-buttons:active {
+  transform: translate(1px, 1px);
+  transition: transform 0.1s;
+  background: #C4C4C440;
+}
+
+.arrow-buttons:disabled {
+  background: #C4C4C460;
+  cursor: not-allowed;
+}
+
+.arrow-buttons:disabled:active {
+  transform: translate(0px, 0px);
+  transition: transform 0s;
+  background: #C4C4C460;
+}
+
+.arrow-buttons:disabled:hover {
+  border: 1px solid #000000;
+}
+
+.arrow-buttons:disabled i i{
+  border: solid #C4C4C440;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
