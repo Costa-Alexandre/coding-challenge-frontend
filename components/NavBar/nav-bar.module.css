@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  letter-spacing: 0.1ch;
+  color: #C4C4C4;
+}
+
+.container div:last-child {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.calendar {
+  width: 25rem;
+  font-size: 1.8rem;
+}
+
+.arrows {
+  display: flex;
+  gap: 0.5rem;
+}

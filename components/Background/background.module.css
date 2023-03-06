@@ -1,0 +1,35 @@
+.background {
+  position: absolute;
+  width: 1250.4px;
+  aspect-ratio: 1;
+  right: -650px;
+  top: -450px;
+  transform: rotate(-17deg);
+  z-index: -1;
+}
+
+.background i {
+  border-radius: 50%;
+  position: absolute;
+  width: 795px;
+  aspect-ratio: 1;
+  transform: rotate(-17deg);
+}
+
+.background i:first-child {
+  top: 0px;
+  left: 343.5px;
+  background: linear-gradient(17deg, #98255F 21.65%, rgba(30, 26, 28, 0.52) 70.64%);
+}
+
+.background i:nth-child(2) {
+  left: 0px;
+  top: 301px;
+  background: linear-gradient(251.89deg, #98255F 15.71%, rgba(30, 26, 28, 0.52) 80.03%);
+}
+
+.background i:last-child {
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(156.67deg, #98255F 14.94%, rgba(30, 26, 28, 0.52) 62.89%);
+}

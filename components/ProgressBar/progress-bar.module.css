@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 12rem;
+  white-space: nowrap;
+}
+
+.bar {
+  position: relative;
+  height: 3.2rem;
+}
+
+.bar i {
+  position: absolute;
+  height: 3.2rem;
+}
+
+.bar i:first-child {
+  width: 100%;
+  background: #2F2F2F;
+}
+
+.bar i:nth-child(2) {
+  background: #2066D2;
+}
+
+.bar i:nth-child(3) {
+  background: #C4C4C4;
+  height: 4rem;
+  width: 0.4rem;
+  left: 80%;
+  top: -0.5rem;
+}
+
+.value {
+  position: absolute;
+  width: 10rem;
+  left: calc(80% - 5rem);
+  text-align: center;
+  top: -2.5rem;
+  font-size: 1.2rem;
+}

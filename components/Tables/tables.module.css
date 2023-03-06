@@ -1,0 +1,57 @@
+/* Common */
+
+.tables {
+  margin-top: 3rem;
+  display: flex;
+  gap: 16px;
+  min-height: 17.5rem;
+}
+
+.tables>div {
+  background-color: #26262C;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+}
+
+.tables table {
+  border-collapse: collapse;
+  white-space: nowrap;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: #C4C4C4;
+}
+
+.tables th {
+  text-align: left;
+  border-bottom: 1px solid #C4C4C4;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+.tables td:last-child {
+  text-align: right;
+  width: 1%;
+  padding-left: 3rem;
+}
+
+.tables tr:first-child td {
+  padding-top: 1.5rem;
+}
+
+.top-products td:first-child,
+.top-recent td:nth-child(3) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 3rem;
+}
+
+/* Top Products */
+
+.top-products th:nth-child(2) {
+  min-width: 10rem;
+}
+
+.bar {
+  background-color: #2066D2;
+  height: 18px;
+}

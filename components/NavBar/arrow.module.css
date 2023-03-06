@@ -1,0 +1,52 @@
+.button {
+  width: 3rem;
+  aspect-ratio: 1;
+  background: #26262C;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.button:hover {
+  background: #26262C50;
+  border: 1px solid #C4C4C4;
+}
+
+.button:active {
+  transform: translate(1px, 1px);
+  transition: transform 0.1s;
+  background: #C4C4C440;
+}
+
+.arrow {
+  width: 2rem;
+  aspect-ratio: 1;
+  justify-content: center;
+}
+
+.arrow i {
+  border: solid #C4C4C4;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
+
+.arrow.right {
+  transform: rotate(-45deg) translate(-2px, -2px);
+  -webkit-transform: rotate(-45deg) translate(-2px, -2px);
+}
+
+.arrow.left {
+  transform: rotate(135deg) translate(-2px, -2px);
+  -webkit-transform: rotate(135deg) translate(-2px, -2px);
+}
+
+.disabled {
+  background: #C4C4C460;
+  pointer-events: none;
+}
+
+.disabled .arrow i {
+  border-color: #C4C4C440;
+}
