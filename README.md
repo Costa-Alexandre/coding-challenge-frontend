@@ -1,25 +1,16 @@
-# Getting Started with Orders-Dashboard-v2 App
+## Update
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I decided to use this project to learn next.JS, so here is an improved version of this challenge. 
 
-## Live app
+## Deployment
 
-This project was deployed to [Vercel](https://coding-challenge-frontend-react-git-main-costa-alexandre.vercel.app/).
-
-## Run locally
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was deployed to Vercel: https://coding-challenge-nextjs.vercel.app/
 
 # AM Coding Challenge - Frontend (React)
 
 ## The case study: Product Order Dashboard
 
-![AM Order Dashboard Challenge](https://github.com/AM-code-treasure/coding-challenge-frontend-react/blob/main/Order-Dashboard-v2.png)
+![AM Order Dashboard Challenge](https://raw.githubusercontent.com/Costa-Alexandre/coding-challenge-frontend/nextJS/Order-Dashboard-v2.png)
 
 Monitoring their order target vs. actual orders is a typical problem for growing product businesses.
 To tackle that challenge, BLACK PRODUCTS Inc. wants to build an "order dashboard" - the software you will develop!

@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  color: #C4C4C4;
+}
+
+.time {
+  color: #FFFFFF;
+  font-weight: 600;
+}
