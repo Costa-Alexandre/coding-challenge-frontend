@@ -3,14 +3,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../contexts/Auth/auth';
 
-export default function Login() {
+export default function ForgotPassword() {
   const emailRef = useRef(null);
-  const passwordRef = useRef(null);
-  const { login } = useContext(AuthContext);
+  const { resetPassword } = useContext(AuthContext);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const { message } = router.query;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,8 +16,11 @@ export default function Login() {
     try {
       setError('');
       setLoading(true);
-      await login(emailRef.current.value, passwordRef.current.value);
-      router.push('/');
+      await resetPassword(emailRef.current.value);
+      router.push({
+        pathname: '/login',
+        query: { message: 'Password reset email sent! Check your inbox' },
+      });
     } catch {
       setError('Failed to sign in');
     }
@@ -29,8 +30,7 @@ export default function Login() {
   return (
     <main>
       <section>
-        <h2>Log In</h2>
-        {message && <div>{message}</div>}
+        <h2>Password Reset</h2>
         {error && <div>{error}</div>}
         <form onSubmit={handleSubmit}>
           <div>
@@ -39,23 +39,12 @@ export default function Login() {
               <input id="email-input" type="email" ref={emailRef} required />
             </label>
           </div>
-          <div>
-            <label htmlFor="password-input">
-              Password
-              <input
-                id="password-input"
-                type="password"
-                ref={passwordRef}
-                required
-              />
-            </label>
-          </div>
           <button disabled={loading} type="submit">
-            Log In
+            Reset Password
           </button>
         </form>
         <div>
-          <Link href="/forgot-password">Forgot Password?</Link>
+          <Link href="/login">Log in</Link>
         </div>
       </section>
       <section>
