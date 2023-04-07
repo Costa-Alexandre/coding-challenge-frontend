@@ -4,6 +4,7 @@ import {
   ProgressBar,
   Tables,
   RefreshCounter,
+  UserMenu,
 } from '../components';
 
 import {
@@ -22,6 +23,7 @@ export default function App({ orders, target, monthName, dates }) {
     <main>
       <section>
         <Background />
+        <UserMenu />
         <NavBar monthName={monthName} dates={dates} />
         <RefreshCounter orders={orders} target={target} />
         <ProgressBar total={total} target={target} />

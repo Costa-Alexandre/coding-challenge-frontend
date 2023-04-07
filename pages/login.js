@@ -11,7 +11,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -23,7 +23,7 @@ export default function Login() {
       setError('Failed to sign in');
     }
     setLoading(false);
-  }
+  };
 
   return (
     <main>
