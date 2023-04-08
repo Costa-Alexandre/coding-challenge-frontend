@@ -11,7 +11,6 @@ import {
 import {
   getOrders,
   getTargets,
-  getSlugs,
   getDates,
   getTotal,
   filterAndSortOrders,
@@ -38,7 +37,7 @@ export default function App({ orders, target, monthName, dates }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { slug } = context.params;
 
   const orders = await getOrders();
@@ -61,16 +60,5 @@ export async function getStaticProps(context) {
       orders: sortedOrders,
       dates: { lastYear, lastMonth, firstYear, firstMonth },
     },
-    revalidate: 30,
-  };
-}
-
-export async function getStaticPaths() {
-  const orders = await getOrders();
-  const paths = getSlugs(orders);
-
-  return {
-    paths,
-    fallback: false,
   };
 }
