@@ -16,7 +16,7 @@ import {
   filterAndSortOrders,
 } from '../utils';
 
-export default function App({ orders, target, monthName, dates }) {
+export default function App({ orders, target, monthName, dates, message }) {
   const total = getTotal(orders);
 
   return (
@@ -24,7 +24,7 @@ export default function App({ orders, target, monthName, dates }) {
       <main>
         <section>
           <Background />
-          <UserMenu />
+          <UserMenu message={message} />
           <NavBar monthName={monthName} dates={dates} />
           <RefreshCounter orders={orders} target={target} />
           <ProgressBar total={total} target={target} />
@@ -39,6 +39,7 @@ export default function App({ orders, target, monthName, dates }) {
 
 export async function getServerSideProps(context) {
   const { slug } = context.params;
+  const { message } = context.query;
 
   const orders = await getOrders();
   const targets = await getTargets();
@@ -59,6 +60,7 @@ export async function getServerSideProps(context) {
       year,
       orders: sortedOrders,
       dates: { lastYear, lastMonth, firstYear, firstMonth },
+      message: message || '',
     },
   };
 }

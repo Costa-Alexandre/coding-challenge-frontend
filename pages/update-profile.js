@@ -38,11 +38,7 @@ export default function UpdateProfile() {
       }
 
       await Promise.all(promises);
-
-      router.push({
-        pathname: '/login',
-        query: { message: promises.length !== 0 ? 'Profile updated' : '' },
-      });
+      router.push(`/${promises.length !== 0 ? '?message=Profile updated' : ''}`);
     } catch (err) {
       // TODO: log error
       setError('Failed to update profile');

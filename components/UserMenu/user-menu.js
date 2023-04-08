@@ -3,13 +3,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../contexts/Auth';
 
-function UserMenu() {
+function UserMenu({ message }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { logout, currentUser } = useAuth();
   const [role, setRole] = useState('');
   const router = useRouter();
-  const { message } = router.query;
 
   const handleLogout = async () => {
     setError('');
