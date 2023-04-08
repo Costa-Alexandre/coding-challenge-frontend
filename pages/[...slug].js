@@ -1,3 +1,4 @@
+import AuthRoute from '../contexts/Auth/AuthRoute';
 import {
   Background,
   NavBar,
@@ -20,18 +21,20 @@ export default function App({ orders, target, monthName, dates }) {
   const total = getTotal(orders);
 
   return (
-    <main>
-      <section>
-        <Background />
-        <UserMenu />
-        <NavBar monthName={monthName} dates={dates} />
-        <RefreshCounter orders={orders} target={target} />
-        <ProgressBar total={total} target={target} />
-      </section>
-      <section>
-        <Tables orders={orders} total={total} />
-      </section>
-    </main>
+    <AuthRoute>
+      <main>
+        <section>
+          <Background />
+          <UserMenu />
+          <NavBar monthName={monthName} dates={dates} />
+          <RefreshCounter orders={orders} target={target} />
+          <ProgressBar total={total} target={target} />
+        </section>
+        <section>
+          <Tables orders={orders} total={total} />
+        </section>
+      </main>
+    </AuthRoute>
   );
 }
 
