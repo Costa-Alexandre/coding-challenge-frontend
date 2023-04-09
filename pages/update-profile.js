@@ -3,18 +3,36 @@ import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
 export default function UpdateProfile() {
-  const emailRef = useRef(null);
+  const nameRef = useRef(null);
+  const roleRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
-  const { currentUser, updateUserEmail, updateUserPassword, loading, setLoading } = useAuth();
+  const {
+    currentUser,
+    updateUserDisplayName,
+    updateUserPassword,
+    loading,
+    setLoading,
+    writeUserRole,
+    getUserRole,
+  } = useAuth();
+  const [userRole, setUserRole] = useState('');
+  const [selectedRole, setSelectedRole] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
+
+  const getRole = async () => {
+    const data = await getUserRole(currentUser.uid);
+    setSelectedRole(data.role || 'reader');
+    setUserRole(data.role);
+  };
 
   useEffect(() => {
     if (!currentUser) {
       router.push('/login');
     }
-  }, [currentUser, router]);
+    getRole();
+  }, [currentUser]);
 
   // eslint-disable-next-line consistent-return
   const handleSubmit = async (e) => {
@@ -29,8 +47,12 @@ export default function UpdateProfile() {
       const promises = [];
       setError('');
 
-      if (emailRef.current.value && emailRef.current.value !== currentUser.email) {
-        promises.push(updateUserEmail(emailRef.current.value));
+      if (nameRef.current.value !== currentUser.displayName) {
+        promises.push(updateUserDisplayName(nameRef.current.value));
+      }
+
+      if (roleRef.current.value !== userRole) {
+        promises.push(writeUserRole(roleRef.current.value));
       }
 
       if (passwordRef.current.value) {
@@ -38,7 +60,9 @@ export default function UpdateProfile() {
       }
 
       await Promise.all(promises);
-      router.push(`/${promises.length !== 0 ? '?message=Profile updated' : ''}`);
+      router.push(
+        `/${promises.length !== 0 ? '?message=Profile updated' : ''}`,
+      );
     } catch (err) {
       // TODO: log error
       setError('Failed to update profile');
@@ -54,25 +78,39 @@ export default function UpdateProfile() {
         {error && <div>{error}</div>}
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email-input">
-              Email
+            <label htmlFor="name-input">
+              Name
               <input
-                id="email-input"
-                type="email"
-                ref={emailRef}
-                placeholder={currentUser?.email}
+                id="name-input"
+                type="text"
+                ref={nameRef}
+                defaultValue={currentUser?.displayName}
               />
             </label>
           </div>
           <div>
+            <label htmlFor="role-input">
+              Role
+              {selectedRole && (
+                <select
+                  id="role-input"
+                  ref={roleRef}
+                  value={selectedRole}
+                  onChange={(e) => {
+                    setSelectedRole(e.target.value);
+                  }}
+                >
+                  <option value="reader">Read Only</option>
+                  <option value="editor">Read and Edit</option>
+                </select>
+              )}
+            </label>
+          </div>
+          Leave blank to keep the same
+          <div>
             <label htmlFor="password-input">
               Password
-              <input
-                id="password-input"
-                type="password"
-                ref={passwordRef}
-                placeholder="*******"
-              />
+              <input id="password-input" type="password" ref={passwordRef} />
             </label>
           </div>
           <div>
@@ -82,7 +120,6 @@ export default function UpdateProfile() {
                 id="confirm-password-input"
                 type="password"
                 ref={confirmPasswordRef}
-                placeholder="*******"
               />
             </label>
           </div>

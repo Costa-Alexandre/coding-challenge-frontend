@@ -26,6 +26,7 @@ function UserMenu({ message }) {
     <div>
       {error && <div>{error}</div>}
       {message && <div>{message}</div>}
+      <div>{currentUser && `Hello, ${currentUser?.displayName}`}</div>
       <div>
         <button type="button" onClick={handleLogout} disabled={loading}>
           Log out

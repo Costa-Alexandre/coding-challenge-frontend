@@ -4,7 +4,9 @@ import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
 export default function SignUp() {
+  const nameRef = useRef(null);
   const emailRef = useRef(null);
+  const roleRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
   const { signup, loading, setLoading } = useAuth();
@@ -22,7 +24,12 @@ export default function SignUp() {
     setLoading(true);
     try {
       setError('');
-      await signup(emailRef.current.value, passwordRef.current.value);
+      await signup(
+        emailRef.current.value,
+        nameRef.current.value,
+        roleRef.current.value,
+        passwordRef.current.value,
+      );
       router.push('/');
     } catch {
       setError('Failed to create an account');
@@ -37,9 +44,29 @@ export default function SignUp() {
         {error && <div>{error}</div>}
         <form onSubmit={handleSubmit}>
           <div>
+            <label htmlFor="name-input">
+              Display Name
+              <input id="name-input" type="text" ref={nameRef} required />
+            </label>
+          </div>
+          <div>
             <label htmlFor="email-input">
               Email
               <input id="email-input" type="email" ref={emailRef} required />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="role-input">
+              Role
+              <select
+                id="role-input"
+                ref={roleRef}
+                required
+                defaultValue="reader"
+              >
+                <option value="reader">Read Only</option>
+                <option value="editor">Read and Edit</option>
+              </select>
             </label>
           </div>
           <div>
