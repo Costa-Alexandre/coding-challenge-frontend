@@ -21,7 +21,6 @@ const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
-  const [loading, setLoading] = useState(true);
 
   const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
@@ -63,7 +62,6 @@ function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
-      setLoading(false);
 
       return unsubscribe;
     });
@@ -72,9 +70,7 @@ function AuthProvider({ children }) {
   const value = useMemo(
     () => ({
       currentUser,
-      loading,
       setCurrentUser,
-      setLoading,
       login,
       logout,
       signup,

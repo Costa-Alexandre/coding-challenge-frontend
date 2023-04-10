@@ -1,21 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
 export default function ForgotPassword() {
-  const emailRef = useRef(null);
-  const { resetPassword, loading, setLoading } = useAuth();
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { resetPassword } = useAuth();
   const [error, setError] = useState('');
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setLoading(true);
 
     try {
       setError('');
-      await resetPassword(emailRef.current.value);
+      await resetPassword(email);
       router.push({
         pathname: '/login',
         query: { message: 'Password reset email sent! Check your inbox' },
@@ -31,14 +31,20 @@ export default function ForgotPassword() {
       <section>
         <h2>Password Reset</h2>
         {error && <div>{error}</div>}
-        <form onSubmit={handleSubmit}>
+        <form>
           <div>
             <label htmlFor="email-input">
               Email
-              <input id="email-input" type="email" ref={emailRef} required />
+              <input
+                id="email-input"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </label>
           </div>
-          <button disabled={loading} type="submit">
+          <button disabled={loading} type="button" onClick={handleSubmit}>
             Reset Password
           </button>
         </form>

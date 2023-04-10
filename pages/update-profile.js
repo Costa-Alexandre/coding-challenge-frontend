@@ -1,30 +1,29 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
 export default function UpdateProfile() {
-  const nameRef = useRef(null);
-  const roleRef = useRef(null);
-  const passwordRef = useRef(null);
-  const confirmPasswordRef = useRef(null);
   const {
     currentUser,
     updateUserDisplayName,
     updateUserPassword,
-    loading,
-    setLoading,
     writeUserRole,
     getUserRole,
   } = useAuth();
+  const [name, setName] = useState(currentUser?.displayName || '');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const [userRole, setUserRole] = useState('');
   const [selectedRole, setSelectedRole] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
 
   const getRole = async () => {
-    const data = await getUserRole(currentUser.uid);
-    setSelectedRole(data.role || 'reader');
-    setUserRole(data.role);
+    const { uid } = currentUser || '';
+    const role = await getUserRole(uid);
+    setUserRole(role || '');
+    setSelectedRole(role || 'reader');
   };
 
   useEffect(() => {
@@ -35,10 +34,8 @@ export default function UpdateProfile() {
   }, [currentUser]);
 
   // eslint-disable-next-line consistent-return
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (passwordRef.current.value !== confirmPasswordRef.current.value) {
+  const handleSubmit = async () => {
+    if (password !== confirmPassword) {
       return setError('Passwords do not match');
     }
 
@@ -47,23 +44,23 @@ export default function UpdateProfile() {
       const promises = [];
       setError('');
 
-      if (nameRef.current.value !== currentUser.displayName) {
-        promises.push(updateUserDisplayName(nameRef.current.value));
+      if (name !== currentUser.displayName) {
+        promises.push(updateUserDisplayName(name));
       }
 
-      if (roleRef.current.value !== userRole) {
-        promises.push(writeUserRole(roleRef.current.value));
+      if (selectedRole !== userRole) {
+        promises.push(writeUserRole(selectedRole));
       }
 
-      if (passwordRef.current.value) {
-        promises.push(updateUserPassword(passwordRef.current.value));
+      if (password) {
+        promises.push(updateUserPassword(password));
       }
 
       await Promise.all(promises);
       router.push(
         `/${promises.length !== 0 ? '?message=Profile updated' : ''}`,
       );
-    } catch (err) {
+    } catch {
       // TODO: log error
       setError('Failed to update profile');
       return setLoading(false);
@@ -76,14 +73,17 @@ export default function UpdateProfile() {
         <h2>Update Profile</h2>
         <h3>Leave blank to keep the same</h3>
         {error && <div>{error}</div>}
-        <form onSubmit={handleSubmit}>
+        <form>
           <div>
             <label htmlFor="name-input">
               Name
               <input
                 id="name-input"
                 type="text"
-                ref={nameRef}
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 defaultValue={currentUser?.displayName}
               />
             </label>
@@ -94,7 +94,6 @@ export default function UpdateProfile() {
               {selectedRole && (
                 <select
                   id="role-input"
-                  ref={roleRef}
                   value={selectedRole}
                   onChange={(e) => {
                     setSelectedRole(e.target.value);
@@ -110,7 +109,12 @@ export default function UpdateProfile() {
           <div>
             <label htmlFor="password-input">
               Password
-              <input id="password-input" type="password" ref={passwordRef} />
+              <input
+                id="password-input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </label>
           </div>
           <div>
@@ -119,11 +123,12 @@ export default function UpdateProfile() {
               <input
                 id="confirm-password-input"
                 type="password"
-                ref={confirmPasswordRef}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </label>
           </div>
-          <button disabled={loading} type="submit">
+          <button disabled={loading} type="button" onClick={handleSubmit}>
             Update
           </button>
           <button type="button" onClick={() => router.back()}>

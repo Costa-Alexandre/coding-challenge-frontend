@@ -1,35 +1,29 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
 export default function SignUp() {
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const roleRef = useRef(null);
-  const passwordRef = useRef(null);
-  const confirmPasswordRef = useRef(null);
-  const { signup, loading, setLoading } = useAuth();
+  const { signup } = useAuth();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [role, setRole] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const router = useRouter();
 
   // eslint-disable-next-line consistent-return
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (passwordRef.current.value !== confirmPasswordRef.current.value) {
+  const handleSubmit = async () => {
+    if (password !== confirmPassword) {
       return setError('Passwords do not match');
     }
 
     setLoading(true);
     try {
       setError('');
-      await signup(
-        emailRef.current.value,
-        nameRef.current.value,
-        roleRef.current.value,
-        passwordRef.current.value,
-      );
+      await signup(email, name, role, password);
       router.push('/');
     } catch {
       setError('Failed to create an account');
@@ -42,17 +36,29 @@ export default function SignUp() {
       <section>
         <h2>Sign Up</h2>
         {error && <div>{error}</div>}
-        <form onSubmit={handleSubmit}>
+        <form>
           <div>
             <label htmlFor="name-input">
               Display Name
-              <input id="name-input" type="text" ref={nameRef} required />
+              <input
+                id="name-input"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </label>
           </div>
           <div>
             <label htmlFor="email-input">
               Email
-              <input id="email-input" type="email" ref={emailRef} required />
+              <input
+                id="email-input"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </label>
           </div>
           <div>
@@ -60,7 +66,8 @@ export default function SignUp() {
               Role
               <select
                 id="role-input"
-                ref={roleRef}
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
                 required
                 defaultValue="reader"
               >
@@ -75,7 +82,8 @@ export default function SignUp() {
               <input
                 id="password-input"
                 type="password"
-                ref={passwordRef}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </label>
@@ -86,12 +94,13 @@ export default function SignUp() {
               <input
                 id="confirm-password-input"
                 type="password"
-                ref={confirmPasswordRef}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
             </label>
           </div>
-          <button disabled={loading} type="submit">
+          <button disabled={loading} type="button" onClick={handleSubmit}>
             Sign Up
           </button>
         </form>
