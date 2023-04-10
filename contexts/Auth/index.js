@@ -44,7 +44,7 @@ function AuthProvider({ children }) {
     const reference = ref(database, `users/${uid}`);
     const snapshot = await get(reference);
     if (snapshot.exists()) {
-      const role = snapshot.val();
+      const { role } = snapshot.val();
       return role;
     }
     return 'reader';

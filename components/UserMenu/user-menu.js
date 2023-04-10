@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../contexts/Auth';
@@ -6,9 +6,16 @@ import { useAuth } from '../../contexts/Auth';
 function UserMenu({ message }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const { logout, currentUser } = useAuth();
+  const { logout, currentUser, getUserRole } = useAuth();
   const [role, setRole] = useState('');
   const router = useRouter();
+
+  const handleGetUserRole = useCallback(async () => {
+    if (currentUser) {
+      const userRole = await getUserRole();
+      setRole(userRole);
+    }
+  }, [currentUser]);
 
   const handleLogout = async () => {
     setError('');
@@ -22,6 +29,10 @@ function UserMenu({ message }) {
     }
   };
 
+  useEffect(() => {
+    handleGetUserRole();
+  }, [currentUser]);
+
   return (
     <div>
       {error && <div>{error}</div>}
@@ -31,6 +42,7 @@ function UserMenu({ message }) {
         <button type="button" onClick={handleLogout} disabled={loading}>
           Log out
         </button>
+        {role === 'editor' && <Link href="/edit-data">Edit Data</Link>}
         <Link href="/update-profile">Update Profile</Link>
       </div>
     </div>
