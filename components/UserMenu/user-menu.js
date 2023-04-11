@@ -2,12 +2,14 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../contexts/Auth';
+import { useSheets } from '../../contexts/Sheets';
 
 function UserMenu({ message }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { logout, currentUser, getUserRole } = useAuth();
   const [role, setRole] = useState('');
+  const { updateOrdersRow } = useSheets();
   const router = useRouter();
 
   const handleGetUserRole = useCallback(async () => {
@@ -29,6 +31,10 @@ function UserMenu({ message }) {
     }
   };
 
+  const handleTest = () => {
+    updateOrdersRow(98, { orderNumber: '2000', orderDate: '10.04.2023', product: 'Test', orderVolume: 100 });
+  };
+
   useEffect(() => {
     handleGetUserRole();
   }, [currentUser]);
@@ -41,6 +47,9 @@ function UserMenu({ message }) {
       <div>
         <button type="button" onClick={handleLogout} disabled={loading}>
           Log out
+        </button>
+        <button type="button" onClick={handleTest}>
+          Test Edit
         </button>
         {role === 'editor' && <Link href="/edit-data">Edit Data</Link>}
         <Link href="/update-profile">Update Profile</Link>
