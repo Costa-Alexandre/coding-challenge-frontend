@@ -1,4 +1,5 @@
 import AuthRoute from '../contexts/Auth/AuthRoute';
+import SheetsProvider from '../contexts/Sheets';
 import {
   Background,
   NavBar,
@@ -21,18 +22,20 @@ export default function App({ orders, target, monthName, dates, message }) {
 
   return (
     <AuthRoute>
-      <main>
-        <section>
-          <Background />
-          <UserMenu message={message} />
-          <NavBar monthName={monthName} dates={dates} />
-          <RefreshCounter orders={orders} target={target} />
-          <ProgressBar total={total} target={target} />
-        </section>
-        <section>
-          <Tables orders={orders} total={total} />
-        </section>
-      </main>
+      <SheetsProvider>
+        <main>
+          <section>
+            <Background />
+            <UserMenu message={message} />
+            <NavBar monthName={monthName} dates={dates} />
+            <RefreshCounter orders={orders} target={target} />
+            <ProgressBar total={total} target={target} />
+          </section>
+          <section>
+            <Tables orders={orders} total={total} />
+          </section>
+        </main>
+      </SheetsProvider>
     </AuthRoute>
   );
 }

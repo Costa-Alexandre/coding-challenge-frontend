@@ -1,7 +1,7 @@
 import { toDecimal } from './format-numbers';
 import filterAndSortOrders from './filter-and-sort-orders';
 
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_SPREADSHEET_API_KEY;
 const SPREADSHEET_ID = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
 
 export async function getOrders() {
