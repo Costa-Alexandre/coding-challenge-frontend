@@ -1,5 +1,5 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import serviceAccount from '../../serviceAccountKey.json';
+import serviceAccount from '../../../serviceAccountKey.json';
 
 // Config variables
 const sheetsConfig = {
