@@ -1,15 +1,12 @@
-import { formatDate, getTopProducts } from "../";
+import * as helpers from "../";
 
 describe("imports", () => {
-  it("should import formatDate and return a function", () => {
-    const func = formatDate;
+    // iterate over the keys of the imported object and test each one to be instance of a function
+    Object.keys(helpers).forEach((key) => {
+        it(`should import ${key} and return a function`, () => {
+            const func = helpers[key];
 
-    expect(func).toBeInstanceOf(Function);
-  });
-
-  it("should import getTopProducts and return a function", () => {
-    const func = getTopProducts;
-
-    expect(func).toBeInstanceOf(Function);
-  });
+            expect(func).toBeInstanceOf(Function);
+        });
+    });
 });
