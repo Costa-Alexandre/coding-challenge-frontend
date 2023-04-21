@@ -2,7 +2,7 @@ import { getOrders, getTargets, refreshData } from './fetch';
 import { getSlugs, getDates } from './get-slugs';
 import getTotal from './get-total';
 import filterAndSortOrders from './filter-and-sort-orders';
-import { toDecimal, withLeadingZero, formatCurrency } from './format-numbers';
+import { parseCurrency, withLeadingZero, formatCurrency } from './format-numbers';
 
 export {
   getOrders,
@@ -12,7 +12,7 @@ export {
   getTotal,
   refreshData,
   filterAndSortOrders,
-  toDecimal,
+  parseCurrency,
   withLeadingZero,
   formatCurrency,
 };
