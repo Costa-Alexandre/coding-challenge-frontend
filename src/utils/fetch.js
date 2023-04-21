@@ -1,4 +1,4 @@
-import { toDecimal } from './format-numbers';
+import { parseCurrency } from './format-numbers';
 import filterAndSortOrders from './filter-and-sort-orders';
 
 const API_KEY = process.env.NEXT_PUBLIC_SPREADSHEET_API_KEY;
@@ -19,7 +19,7 @@ export async function getOrders() {
       month: parseInt(order[1].slice(3, 5), 10),
       year: parseInt(order[1].slice(6, 10), 10),
       product: order[2],
-      orderVolume: toDecimal(order[3]),
+      orderVolume: parseCurrency(order[3]),
     }));
   } catch (err) {
     return [];
@@ -37,7 +37,7 @@ export async function getTargets() {
     const { values } = data;
     return values.slice(1).map((target) => ({
       month: target[0],
-      target: parseInt(target[1].replace('.', '').replace(',', '.'), 10),
+      target: parseInt(parseCurrency(target[1])),
     }));
   } catch (err) {
     return [];

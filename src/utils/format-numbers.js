@@ -1,14 +1,7 @@
-const formatCurrency = (value, digits = 2) => {
-  const formatter = new Intl.NumberFormat('de-DE', {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: digits,
-  });
+const formatCurrency = (value) => new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(value);
 
-  return `${formatter.format(value)} €`;
-};
-
-function toDecimal(num) {
-  const cleanStr = String(num).replace(/[^0-9.,]/g, '');
+function parseCurrency(currencyString) {
+  const cleanStr = String(currencyString).replace(/[^0-9.,]/g, '');
   let dotPos = cleanStr.indexOf('.');
   let commaPos = cleanStr.indexOf(',');
 
@@ -46,4 +39,4 @@ function toDecimal(num) {
 
 const withLeadingZero = (number) => (number < 10 ? `0${number}` : number);
 
-export { formatCurrency, toDecimal, withLeadingZero };
+export { formatCurrency, parseCurrency, withLeadingZero };
