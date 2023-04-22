@@ -1,12 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../../contexts/Auth/auth';
+import { useAuth } from '../../contexts/Auth';
 
 function UserMenu() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const { logout } = useContext(AuthContext);
+  const { logout, currentUser } = useAuth();
+  const [role, setRole] = useState('');
   const router = useRouter();
   const { message } = router.query;
 
@@ -18,8 +19,8 @@ function UserMenu() {
       router.push('/login');
     } catch {
       setError('Failed to log out');
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

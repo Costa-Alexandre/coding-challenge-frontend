@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../contexts/Auth/auth';
+import { useAuth } from '../contexts/Auth';
 
 export default function UpdateProfile() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
-  const { currentUser, updateUserEmail, updateUserPassword } = useContext(AuthContext);
+  const { currentUser, updateUserEmail, updateUserPassword, loading, setLoading } = useAuth();
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -17,6 +16,7 @@ export default function UpdateProfile() {
     }
   }, [currentUser, router]);
 
+  // eslint-disable-next-line consistent-return
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,9 +24,9 @@ export default function UpdateProfile() {
       return setError('Passwords do not match');
     }
 
+    setLoading(true);
     try {
       const promises = [];
-      setLoading(true);
       setError('');
 
       if (emailRef.current.value && emailRef.current.value !== currentUser.email) {
@@ -46,8 +46,8 @@ export default function UpdateProfile() {
     } catch (err) {
       // TODO: log error
       setError('Failed to update profile');
+      return setLoading(false);
     }
-    return setLoading(false);
   };
 
   return (

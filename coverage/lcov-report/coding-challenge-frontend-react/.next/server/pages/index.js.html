@@ -1,0 +1,310 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for coding-challenge-frontend-react/.next/server/pages/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">coding-challenge-frontend-react/.next/server/pages</a> index.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/16</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/15</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+var exports = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >exports.id = "pages/index";</span>
+<span class="cstat-no" title="statement not covered" >exports.ids = ["pages/index"];</span>
+<span class="cstat-no" title="statement not covered" >exports.modules = {</span>
+&nbsp;
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (/* binding */ App),\n/* harmony export */   \"getServerSideProps\": () =&gt; (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var _utils_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/fetch */ \"./utils/fetch.js\");\n/* harmony import */ var _utils_get_slugs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/get-slugs */ \"./utils/get-slugs.js\");\n\n\nfunction App() {}\nasync function getServerSideProps(context) {\n    const orders = await (0,_utils_fetch__WEBPACK_IMPORTED_MODULE_0__.getOrders)();\n    const { message  } = context.query;\n    const dates = (0,_utils_get_slugs__WEBPACK_IMPORTED_MODULE_1__.getDates)(orders);\n    const { lastYear , lastMonth  } = dates;\n    const year = lastYear;\n    const monthNumber = lastMonth;\n    const messagePath = message ? `?message=${message}` : \"\";\n    return {\n        redirect: {\n            destination: `/${year}/${monthNumber}${messagePath}`,\n            permanent: false\n        }\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQTJDO0FBQ0c7QUFFL0IsU0FBU0UsTUFBTSxDQUFDLENBQUM7QUFFekIsZUFBZUMsbUJBQW1CQyxPQUFPLEVBQUU7SUFDaEQsTUFBTUMsU0FBUyxNQUFNTCx1REFBU0E7SUFDOUIsTUFBTSxFQUFFTSxRQUFPLEVBQUUsR0FBR0YsUUFBUUcsS0FBSztJQUVqQyxNQUFNQyxRQUFRUCwwREFBUUEsQ0FBQ0k7SUFDdkIsTUFBTSxFQUFFSSxTQUFRLEVBQUVDLFVBQVMsRUFBRSxHQUFHRjtJQUNoQyxNQUFNRyxPQUFPRjtJQUNiLE1BQU1HLGNBQWNGO0lBRXBCLE1BQU1HLGNBQWNQLFVBQVUsQ0FBQyxTQUFTLEVBQUVBLFFBQVEsQ0FBQyxHQUFHLEVBQUU7SUFFeEQsT0FBTztRQUNMUSxVQUFVO1lBQ1JDLGFBQWEsQ0FBQyxDQUFDLEVBQUVKLEtBQUssQ0FBQyxFQUFFQyxZQUFZLEVBQUVDLFlBQVksQ0FBQztZQUNwREcsV0FBVyxLQUFLO1FBQ2xCO0lBQ0Y7QUFDRixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL3BhZ2VzL2luZGV4LmpzP2JlZTciXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZ2V0T3JkZXJzIH0gZnJvbSAnLi4vdXRpbHMvZmV0Y2gnO1xuaW1wb3J0IHsgZ2V0RGF0ZXMgfSBmcm9tICcuLi91dGlscy9nZXQtc2x1Z3MnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBcHAoKSB7fVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0U2VydmVyU2lkZVByb3BzKGNvbnRleHQpIHtcbiAgY29uc3Qgb3JkZXJzID0gYXdhaXQgZ2V0T3JkZXJzKCk7XG4gIGNvbnN0IHsgbWVzc2FnZSB9ID0gY29udGV4dC5xdWVyeTtcblxuICBjb25zdCBkYXRlcyA9IGdldERhdGVzKG9yZGVycyk7XG4gIGNvbnN0IHsgbGFzdFllYXIsIGxhc3RNb250aCB9ID0gZGF0ZXM7XG4gIGNvbnN0IHllYXIgPSBsYXN0WWVhcjtcbiAgY29uc3QgbW9udGhOdW1iZXIgPSBsYXN0TW9udGg7XG5cbiAgY29uc3QgbWVzc2FnZVBhdGggPSBtZXNzYWdlID8gYD9tZXNzYWdlPSR7bWVzc2FnZX1gIDogJyc7XG5cbiAgcmV0dXJuIHtcbiAgICByZWRpcmVjdDoge1xuICAgICAgZGVzdGluYXRpb246IGAvJHt5ZWFyfS8ke21vbnRoTnVtYmVyfSR7bWVzc2FnZVBhdGh9YCxcbiAgICAgIHBlcm1hbmVudDogZmFsc2UsXG4gICAgfSxcbiAgfTtcbn1cbiJdLCJuYW1lcyI6WyJnZXRPcmRlcnMiLCJnZXREYXRlcyIsIkFwcCIsImdldFNlcnZlclNpZGVQcm9wcyIsImNvbnRleHQiLCJvcmRlcnMiLCJtZXNzYWdlIiwicXVlcnkiLCJkYXRlcyIsImxhc3RZZWFyIiwibGFzdE1vbnRoIiwieWVhciIsIm1vbnRoTnVtYmVyIiwibWVzc2FnZVBhdGgiLCJyZWRpcmVjdCIsImRlc3RpbmF0aW9uIiwicGVybWFuZW50Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/index.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./utils/fetch.js":
+/*!************************!*\
+  !*** ./utils/fetch.js ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getOrders\": () =&gt; (/* binding */ getOrders),\n/* harmony export */   \"getTargets\": () =&gt; (/* binding */ getTargets),\n/* harmony export */   \"refreshData\": () =&gt; (/* binding */ refreshData)\n/* harmony export */ });\n/* harmony import */ var _format_numbers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./format-numbers */ \"./utils/format-numbers.js\");\n/* harmony import */ var _filter_and_sort_orders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter-and-sort-orders */ \"./utils/filter-and-sort-orders.js\");\n\n\nconst API_KEY = \"AIzaSyD3PG22EN-OJOf1IXcOGT0jAAYUGOEpKMQ\";\nconst SPREADSHEET_ID = \"1tvqevVPvpByTSXrSpvnICPvOnZ-gYI6ZeaiHF8hlfqg\";\nasync function getOrders() {\n    const range = \"Orders\";\n    try {\n        const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${range}?key=${API_KEY}`);\n        const data = await res.json();\n        return data.values.slice(1).map((order)=&gt;({\n                orderNumber: parseInt(order[0], 10),\n                day: parseInt(order[1].slice(0, 2), 10),\n                month: parseInt(order[1].slice(3, 5), 10),\n                year: parseInt(order[1].slice(6, 10), 10),\n                product: order[2],\n                orderVolume: (0,_format_numbers__WEBPACK_IMPORTED_MODULE_0__.toDecimal)(order[3])\n            }));\n    } catch (err) {\n        return [];\n    }\n}\nasync function getTargets() {\n    const range = \"Targets\";\n    try {\n        const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${range}?key=${API_KEY}`);\n        const data = await res.json();\n        const { values  } = data;\n        return values.slice(1).map((target)=&gt;({\n                month: target[0],\n                target: parseInt(target[1].replace(\".\", \"\").replace(\",\", \".\"), 10)\n            }));\n    } catch (err) {\n        return [];\n    }\n}\nasync function refreshData(year, month) {\n    const orders = await getOrders();\n    const targets = await getTargets();\n    const sortedOrders = (0,_filter_and_sort_orders__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(orders, year, month);\n    const { target  } = targets[month - 1];\n    return {\n        newOrders: sortedOrders,\n        newTarget: target\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi91dGlscy9mZXRjaC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUE2QztBQUNjO0FBRTNELE1BQU1FLFVBQVVDLHlDQUEyQztBQUMzRCxNQUFNRyxpQkFBaUJILDhDQUFzQztBQUV0RCxlQUFlSyxZQUFZO0lBQ2hDLE1BQU1DLFFBQVE7SUFFZCxJQUFJO1FBQ0YsTUFBTUMsTUFBTSxNQUFNQyxNQUNoQixDQUFDLDhDQUE4QyxFQUFFTCxlQUFlLFFBQVEsRUFBRUcsTUFBTSxLQUFLLEVBQUVQLFFBQVEsQ0FBQztRQUVsRyxNQUFNVSxPQUFPLE1BQU1GLElBQUlHLElBQUk7UUFFM0IsT0FBT0QsS0FBS0UsTUFBTSxDQUFDQyxLQUFLLENBQUMsR0FBR0MsR0FBRyxDQUFDLENBQUNDLFFBQVc7Z0JBQzFDQyxhQUFhQyxTQUFTRixLQUFLLENBQUMsRUFBRSxFQUFFO2dCQUNoQ0csS0FBS0QsU0FBU0YsS0FBSyxDQUFDLEVBQUUsQ0FBQ0YsS0FBSyxDQUFDLEdBQUcsSUFBSTtnQkFDcENNLE9BQU9GLFNBQVNGLEtBQUssQ0FBQyxFQUFFLENBQUNGLEtBQUssQ0FBQyxHQUFHLElBQUk7Z0JBQ3RDTyxNQUFNSCxTQUFTRixLQUFLLENBQUMsRUFBRSxDQUFDRixLQUFLLENBQUMsR0FBRyxLQUFLO2dCQUN0Q1EsU0FBU04sS0FBSyxDQUFDLEVBQUU7Z0JBQ2pCTyxhQUFheEIsMERBQVNBLENBQUNpQixLQUFLLENBQUMsRUFBRTtZQUNqQztJQUNGLEVBQUUsT0FBT1EsS0FBSztRQUNaLE9BQU8sRUFBRTtJQUNYO0FBQ0YsQ0FBQztBQUVNLGVBQWVDLGFBQWE7SUFDakMsTUFBTWpCLFFBQVE7SUFFZCxJQUFJO1FBQ0YsTUFBTUMsTUFBTSxNQUFNQyxNQUNoQixDQUFDLDhDQUE4QyxFQUFFTCxlQUFlLFFBQVEsRUFBRUcsTUFBTSxLQUFLLEVBQUVQLFFBQVEsQ0FBQztRQUVsRyxNQUFNVSxPQUFPLE1BQU1GLElBQUlHLElBQUk7UUFDM0IsTUFBTSxFQUFFQyxPQUFNLEVBQUUsR0FBR0Y7UUFDbkIsT0FBT0UsT0FBT0MsS0FBSyxDQUFDLEdBQUdDLEdBQUcsQ0FBQyxDQUFDVyxTQUFZO2dCQUN0Q04sT0FBT00sTUFBTSxDQUFDLEVBQUU7Z0JBQ2hCQSxRQUFRUixTQUFTUSxNQUFNLENBQUMsRUFBRSxDQUFDQyxPQUFPLENBQUMsS0FBSyxJQUFJQSxPQUFPLENBQUMsS0FBSyxNQUFNO1lBQ2pFO0lBQ0YsRUFBRSxPQUFPSCxLQUFLO1FBQ1osT0FBTyxFQUFFO0lBQ1g7QUFDRixDQUFDO0FBRU0sZUFBZUksWUFBWVAsSUFBSSxFQUFFRCxLQUFLLEVBQUU7SUFDN0MsTUFBTVMsU0FBUyxNQUFNdEI7SUFDckIsTUFBTXVCLFVBQVUsTUFBTUw7SUFDdEIsTUFBTU0sZUFBZS9CLG1FQUFtQkEsQ0FBQzZCLFFBQVFSLE1BQU1EO0lBRXZELE1BQU0sRUFBRU0sT0FBTSxFQUFFLEdBQUdJLE9BQU8sQ0FBQ1YsUUFBUSxFQUFFO0lBQ3JDLE9BQU87UUFDTFksV0FBV0Q7UUFDWEUsV0FBV1A7SUFDYjtBQUNGLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb2RpbmctY2hhbGxlbmdlLWZyb250ZW5kLXJlYWN0Ly4vdXRpbHMvZmV0Y2guanM/NThiNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB0b0RlY2ltYWwgfSBmcm9tICcuL2Zvcm1hdC1udW1iZXJzJztcbmltcG9ydCBmaWx0ZXJBbmRTb3J0T3JkZXJzIGZyb20gJy4vZmlsdGVyLWFuZC1zb3J0LW9yZGVycyc7XG5cbmNvbnN0IEFQSV9LRVkgPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TUFJFQURTSEVFVF9BUElfS0VZO1xuY29uc3QgU1BSRUFEU0hFRVRfSUQgPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TUFJFQURTSEVFVF9JRDtcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldE9yZGVycygpIHtcbiAgY29uc3QgcmFuZ2UgPSAnT3JkZXJzJztcblxuICB0cnkge1xuICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKFxuICAgICAgYGh0dHBzOi8vc2hlZXRzLmdvb2dsZWFwaXMuY29tL3Y0L3NwcmVhZHNoZWV0cy8ke1NQUkVBRFNIRUVUX0lEfS92YWx1ZXMvJHtyYW5nZX0/a2V5PSR7QVBJX0tFWX1gLFxuICAgICk7XG4gICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKCk7XG5cbiAgICByZXR1cm4gZGF0YS52YWx1ZXMuc2xpY2UoMSkubWFwKChvcmRlcikgPT4gKHtcbiAgICAgIG9yZGVyTnVtYmVyOiBwYXJzZUludChvcmRlclswXSwgMTApLFxuICAgICAgZGF5OiBwYXJzZUludChvcmRlclsxXS5zbGljZSgwLCAyKSwgMTApLFxuICAgICAgbW9udGg6IHBhcnNlSW50KG9yZGVyWzFdLnNsaWNlKDMsIDUpLCAxMCksXG4gICAgICB5ZWFyOiBwYXJzZUludChvcmRlclsxXS5zbGljZSg2LCAxMCksIDEwKSxcbiAgICAgIHByb2R1Y3Q6IG9yZGVyWzJdLFxuICAgICAgb3JkZXJWb2x1bWU6IHRvRGVjaW1hbChvcmRlclszXSksXG4gICAgfSkpO1xuICB9IGNhdGNoIChlcnIpIHtcbiAgICByZXR1cm4gW107XG4gIH1cbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFRhcmdldHMoKSB7XG4gIGNvbnN0IHJhbmdlID0gJ1RhcmdldHMnO1xuXG4gIHRyeSB7XG4gICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goXG4gICAgICBgaHR0cHM6Ly9zaGVldHMuZ29vZ2xlYXBpcy5jb20vdjQvc3ByZWFkc2hlZXRzLyR7U1BSRUFEU0hFRVRfSUR9L3ZhbHVlcy8ke3JhbmdlfT9rZXk9JHtBUElfS0VZfWAsXG4gICAgKTtcbiAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKTtcbiAgICBjb25zdCB7IHZhbHVlcyB9ID0gZGF0YTtcbiAgICByZXR1cm4gdmFsdWVzLnNsaWNlKDEpLm1hcCgodGFyZ2V0KSA9PiAoe1xuICAgICAgbW9udGg6IHRhcmdldFswXSxcbiAgICAgIHRhcmdldDogcGFyc2VJbnQodGFyZ2V0WzFdLnJlcGxhY2UoJy4nLCAnJykucmVwbGFjZSgnLCcsICcuJyksIDEwKSxcbiAgICB9KSk7XG4gIH0gY2F0Y2ggKGVycikge1xuICAgIHJldHVybiBbXTtcbiAgfVxufVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gcmVmcmVzaERhdGEoeWVhciwgbW9udGgpIHtcbiAgY29uc3Qgb3JkZXJzID0gYXdhaXQgZ2V0T3JkZXJzKCk7XG4gIGNvbnN0IHRhcmdldHMgPSBhd2FpdCBnZXRUYXJnZXRzKCk7XG4gIGNvbnN0IHNvcnRlZE9yZGVycyA9IGZpbHRlckFuZFNvcnRPcmRlcnMob3JkZXJzLCB5ZWFyLCBtb250aCk7XG5cbiAgY29uc3QgeyB0YXJnZXQgfSA9IHRhcmdldHNbbW9udGggLSAxXTtcbiAgcmV0dXJuIHtcbiAgICBuZXdPcmRlcnM6IHNvcnRlZE9yZGVycyxcbiAgICBuZXdUYXJnZXQ6IHRhcmdldCxcbiAgfTtcbn1cbiJdLCJuYW1lcyI6WyJ0b0RlY2ltYWwiLCJmaWx0ZXJBbmRTb3J0T3JkZXJzIiwiQVBJX0tFWSIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19TUFJFQURTSEVFVF9BUElfS0VZIiwiU1BSRUFEU0hFRVRfSUQiLCJORVhUX1BVQkxJQ19TUFJFQURTSEVFVF9JRCIsImdldE9yZGVycyIsInJhbmdlIiwicmVzIiwiZmV0Y2giLCJkYXRhIiwianNvbiIsInZhbHVlcyIsInNsaWNlIiwibWFwIiwib3JkZXIiLCJvcmRlck51bWJlciIsInBhcnNlSW50IiwiZGF5IiwibW9udGgiLCJ5ZWFyIiwicHJvZHVjdCIsIm9yZGVyVm9sdW1lIiwiZXJyIiwiZ2V0VGFyZ2V0cyIsInRhcmdldCIsInJlcGxhY2UiLCJyZWZyZXNoRGF0YSIsIm9yZGVycyIsInRhcmdldHMiLCJzb3J0ZWRPcmRlcnMiLCJuZXdPcmRlcnMiLCJuZXdUYXJnZXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./utils/fetch.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./utils/filter-and-sort-orders.js":
+/*!*****************************************!*\
+  !*** ./utils/filter-and-sort-orders.js ***!
+  \*****************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst filterAndSortOrders = (orders, year, month)=&gt;orders.filter((order)=&gt;order.year === year &amp;&amp; order.month === month).sort((a, b)=&gt;b.day - a.day);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filterAndSortOrders);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi91dGlscy9maWx0ZXItYW5kLXNvcnQtb3JkZXJzLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBQSxNQUFNQSxzQkFBc0IsQ0FBQ0MsUUFBUUMsTUFBTUMsUUFBVUYsT0FBT0csTUFBTSxDQUNoRSxDQUFDQyxRQUFVQSxNQUFNSCxJQUFJLEtBQUtBLFFBQVFHLE1BQU1GLEtBQUssS0FBS0EsT0FDbERHLElBQUksQ0FBQyxDQUFDQyxHQUFHQyxJQUFNQSxFQUFFQyxHQUFHLEdBQUdGLEVBQUVFLEdBQUc7QUFFOUIsaUVBQWVULG1CQUFtQkEsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2NvZGluZy1jaGFsbGVuZ2UtZnJvbnRlbmQtcmVhY3QvLi91dGlscy9maWx0ZXItYW5kLXNvcnQtb3JkZXJzLmpzP2YwMGEiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgZmlsdGVyQW5kU29ydE9yZGVycyA9IChvcmRlcnMsIHllYXIsIG1vbnRoKSA9PiBvcmRlcnMuZmlsdGVyKFxuICAob3JkZXIpID0+IG9yZGVyLnllYXIgPT09IHllYXIgJiYgb3JkZXIubW9udGggPT09IG1vbnRoLFxuKS5zb3J0KChhLCBiKSA9PiBiLmRheSAtIGEuZGF5KTtcblxuZXhwb3J0IGRlZmF1bHQgZmlsdGVyQW5kU29ydE9yZGVycztcbiJdLCJuYW1lcyI6WyJmaWx0ZXJBbmRTb3J0T3JkZXJzIiwib3JkZXJzIiwieWVhciIsIm1vbnRoIiwiZmlsdGVyIiwib3JkZXIiLCJzb3J0IiwiYSIsImIiLCJkYXkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./utils/filter-and-sort-orders.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./utils/format-numbers.js":
+/*!*********************************!*\
+  !*** ./utils/format-numbers.js ***!
+  \*********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"formatCurrency\": () =&gt; (/* binding */ formatCurrency),\n/* harmony export */   \"toDecimal\": () =&gt; (/* binding */ toDecimal),\n/* harmony export */   \"withLeadingZero\": () =&gt; (/* binding */ withLeadingZero)\n/* harmony export */ });\nconst formatCurrency = (value, digits = 2)=&gt;{\n    const formatter = new Intl.NumberFormat(\"de-DE\", {\n        minimumFractionDigits: digits,\n        maximumFractionDigits: digits\n    });\n    return `${formatter.format(value)} €`;\n};\nfunction toDecimal(num) {\n    const cleanStr = String(num).replace(/[^0-9.,]/g, \"\");\n    let dotPos = cleanStr.indexOf(\".\");\n    let commaPos = cleanStr.indexOf(\",\");\n    if (dotPos &lt; 0) dotPos = 0;\n    if (commaPos &lt; 0) commaPos = 0;\n    const dotSplit = cleanStr.split(\".\");\n    const commaSplit = cleanStr.split(\",\");\n    const isDecimalDot = dotPos &amp;&amp; (commaPos &amp;&amp; dotPos &gt; commaPos || !commaPos &amp;&amp; dotSplit[dotSplit.length - 1].length === 2);\n    const isDecimalComma = commaPos &amp;&amp; (dotPos &amp;&amp; dotPos &lt; commaPos || !dotPos &amp;&amp; commaSplit[commaSplit.length - 1].length === 2);\n    let integerPart = cleanStr;\n    let decimalPart = \"0\";\n    if (isDecimalComma) {\n        [integerPart, decimalPart] = commaSplit;\n    }\n    if (isDecimalDot) {\n        [integerPart, decimalPart] = dotSplit;\n    }\n    return parseFloat(`${integerPart.replace(/\\D/g, \"\")}.${decimalPart.replace(/\\D/g, \"\")}`);\n}\nconst withLeadingZero = (number)=&gt;number &lt; 10 ? `0${number}` : number;\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi91dGlscy9mb3JtYXQtbnVtYmVycy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxNQUFNQSxpQkFBaUIsQ0FBQ0MsT0FBT0MsU0FBUyxDQUFDLEdBQUs7SUFDNUMsTUFBTUMsWUFBWSxJQUFJQyxLQUFLQyxZQUFZLENBQUMsU0FBUztRQUMvQ0MsdUJBQXVCSjtRQUN2QkssdUJBQXVCTDtJQUN6QjtJQUVBLE9BQU8sQ0FBQyxFQUFFQyxVQUFVSyxNQUFNLENBQUNQLE9BQU8sRUFBRSxDQUFDO0FBQ3ZDO0FBRUEsU0FBU1EsVUFBVUMsR0FBRyxFQUFFO0lBQ3RCLE1BQU1DLFdBQVdDLE9BQU9GLEtBQUtHLE9BQU8sQ0FBQyxhQUFhO0lBQ2xELElBQUlDLFNBQVNILFNBQVNJLE9BQU8sQ0FBQztJQUM5QixJQUFJQyxXQUFXTCxTQUFTSSxPQUFPLENBQUM7SUFFaEMsSUFBSUQsU0FBUyxHQUFHQSxTQUFTO0lBRXpCLElBQUlFLFdBQVcsR0FBR0EsV0FBVztJQUU3QixNQUFNQyxXQUFXTixTQUFTTyxLQUFLLENBQUM7SUFDaEMsTUFBTUMsYUFBYVIsU0FBU08sS0FBSyxDQUFDO0lBRWxDLE1BQU1FLGVBQWVOLFVBQ2YsYUFBYUEsU0FBU0UsWUFDdEIsQ0FBQ0EsWUFBWUMsUUFBUSxDQUFDQSxTQUFTSSxNQUFNLEdBQUcsRUFBRSxDQUFDQSxNQUFNLEtBQUssQ0FBQztJQUU3RCxNQUFNQyxpQkFBaUJOLFlBQ2pCLFdBQVdGLFNBQVNFLFlBQ3BCLENBQUNGLFVBQVVLLFVBQVUsQ0FBQ0EsV0FBV0UsTUFBTSxHQUFHLEVBQUUsQ0FBQ0EsTUFBTSxLQUFLLENBQUM7SUFFL0QsSUFBSUUsY0FBY1o7SUFDbEIsSUFBSWEsY0FBYztJQUNsQixJQUFJRixnQkFBZ0I7UUFDbEIsQ0FBQ0MsYUFBYUMsWUFBWSxHQUFHTDtJQUMvQixDQUFDO0lBQ0QsSUFBSUMsY0FBYztRQUNoQixDQUFDRyxhQUFhQyxZQUFZLEdBQUdQO0lBQy9CLENBQUM7SUFFRCxPQUFPUSxXQUNMLENBQUMsRUFBRUYsWUFBWVYsT0FBTyxDQUFDLE9BQU8sSUFBSSxDQUFDLEVBQUVXLFlBQVlYLE9BQU8sQ0FDdEQsT0FDQSxJQUNBLENBQUM7QUFFUDtBQUVBLE1BQU1hLGtCQUFrQixDQUFDQyxTQUFZQSxTQUFTLEtBQUssQ0FBQyxDQUFDLEVBQUVBLE9BQU8sQ0FBQyxHQUFHQSxNQUFNO0FBRWxCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL3V0aWxzL2Zvcm1hdC1udW1iZXJzLmpzPzJiMjkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgZm9ybWF0Q3VycmVuY3kgPSAodmFsdWUsIGRpZ2l0cyA9IDIpID0+IHtcbiAgY29uc3QgZm9ybWF0dGVyID0gbmV3IEludGwuTnVtYmVyRm9ybWF0KCdkZS1ERScsIHtcbiAgICBtaW5pbXVtRnJhY3Rpb25EaWdpdHM6IGRpZ2l0cyxcbiAgICBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IGRpZ2l0cyxcbiAgfSk7XG5cbiAgcmV0dXJuIGAke2Zvcm1hdHRlci5mb3JtYXQodmFsdWUpfSDigqxgO1xufTtcblxuZnVuY3Rpb24gdG9EZWNpbWFsKG51bSkge1xuICBjb25zdCBjbGVhblN0ciA9IFN0cmluZyhudW0pLnJlcGxhY2UoL1teMC05LixdL2csICcnKTtcbiAgbGV0IGRvdFBvcyA9IGNsZWFuU3RyLmluZGV4T2YoJy4nKTtcbiAgbGV0IGNvbW1hUG9zID0gY2xlYW5TdHIuaW5kZXhPZignLCcpO1xuXG4gIGlmIChkb3RQb3MgPCAwKSBkb3RQb3MgPSAwO1xuXG4gIGlmIChjb21tYVBvcyA8IDApIGNvbW1hUG9zID0gMDtcblxuICBjb25zdCBkb3RTcGxpdCA9IGNsZWFuU3RyLnNwbGl0KCcuJyk7XG4gIGNvbnN0IGNvbW1hU3BsaXQgPSBjbGVhblN0ci5zcGxpdCgnLCcpO1xuXG4gIGNvbnN0IGlzRGVjaW1hbERvdCA9IGRvdFBvc1xuICAgICYmICgoY29tbWFQb3MgJiYgZG90UG9zID4gY29tbWFQb3MpXG4gICAgfHwgKCFjb21tYVBvcyAmJiBkb3RTcGxpdFtkb3RTcGxpdC5sZW5ndGggLSAxXS5sZW5ndGggPT09IDIpKTtcblxuICBjb25zdCBpc0RlY2ltYWxDb21tYSA9IGNvbW1hUG9zXG4gICAgJiYgKChkb3RQb3MgJiYgZG90UG9zIDwgY29tbWFQb3MpXG4gICAgfHwgKCFkb3RQb3MgJiYgY29tbWFTcGxpdFtjb21tYVNwbGl0Lmxlbmd0aCAtIDFdLmxlbmd0aCA9PT0gMikpO1xuXG4gIGxldCBpbnRlZ2VyUGFydCA9IGNsZWFuU3RyO1xuICBsZXQgZGVjaW1hbFBhcnQgPSAnMCc7XG4gIGlmIChpc0RlY2ltYWxDb21tYSkge1xuICAgIFtpbnRlZ2VyUGFydCwgZGVjaW1hbFBhcnRdID0gY29tbWFTcGxpdDtcbiAgfVxuICBpZiAoaXNEZWNpbWFsRG90KSB7XG4gICAgW2ludGVnZXJQYXJ0LCBkZWNpbWFsUGFydF0gPSBkb3RTcGxpdDtcbiAgfVxuXG4gIHJldHVybiBwYXJzZUZsb2F0KFxuICAgIGAke2ludGVnZXJQYXJ0LnJlcGxhY2UoL1xcRC9nLCAnJyl9LiR7ZGVjaW1hbFBhcnQucmVwbGFjZShcbiAgICAgIC9cXEQvZyxcbiAgICAgICcnLFxuICAgICl9YCxcbiAgKTtcbn1cblxuY29uc3Qgd2l0aExlYWRpbmdaZXJvID0gKG51bWJlcikgPT4gKG51bWJlciA8IDEwID8gYDAke251bWJlcn1gIDogbnVtYmVyKTtcblxuZXhwb3J0IHsgZm9ybWF0Q3VycmVuY3ksIHRvRGVjaW1hbCwgd2l0aExlYWRpbmdaZXJvIH07XG4iXSwibmFtZXMiOlsiZm9ybWF0Q3VycmVuY3kiLCJ2YWx1ZSIsImRpZ2l0cyIsImZvcm1hdHRlciIsIkludGwiLCJOdW1iZXJGb3JtYXQiLCJtaW5pbXVtRnJhY3Rpb25EaWdpdHMiLCJtYXhpbXVtRnJhY3Rpb25EaWdpdHMiLCJmb3JtYXQiLCJ0b0RlY2ltYWwiLCJudW0iLCJjbGVhblN0ciIsIlN0cmluZyIsInJlcGxhY2UiLCJkb3RQb3MiLCJpbmRleE9mIiwiY29tbWFQb3MiLCJkb3RTcGxpdCIsInNwbGl0IiwiY29tbWFTcGxpdCIsImlzRGVjaW1hbERvdCIsImxlbmd0aCIsImlzRGVjaW1hbENvbW1hIiwiaW50ZWdlclBhcnQiLCJkZWNpbWFsUGFydCIsInBhcnNlRmxvYXQiLCJ3aXRoTGVhZGluZ1plcm8iLCJudW1iZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./utils/format-numbers.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./utils/get-slugs.js":
+/*!****************************!*\
+  !*** ./utils/get-slugs.js ***!
+  \****************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getDates\": () =&gt; (/* binding */ getDates),\n/* harmony export */   \"getSlugs\": () =&gt; (/* binding */ getSlugs)\n/* harmony export */ });\nconst getDates = (orders)=&gt;{\n    const firstYear = Math.min(...orders.map((order)=&gt;order.year));\n    const lastYear = Math.max(...orders.map((order)=&gt;order.year));\n    const firstMonth = Math.min(...orders.filter((order)=&gt;order.year === firstYear).map((order)=&gt;order.month));\n    const lastMonth = Math.max(...orders.filter((order)=&gt;order.year === lastYear).map((order)=&gt;order.month));\n    return {\n        firstYear,\n        lastYear,\n        firstMonth,\n        lastMonth\n    };\n};\nconst getSlugs = (orders)=&gt;{\n    const { firstYear , lastYear , firstMonth , lastMonth  } = getDates(orders);\n    const totalMonths = (lastYear - firstYear) * 12 + lastMonth - firstMonth + 1;\n    const slugs = [];\n    for(let m = 0; m &lt; totalMonths; m += 1){\n        const year = firstYear + Math.floor((firstMonth - 1 + m) / 12);\n        const month = (firstMonth - 1 + m) % 12 + 1;\n        slugs.push({\n            params: {\n                slug: [\n                    `${year}`,\n                    `${month}`\n                ]\n            }\n        });\n    }\n    return slugs;\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi91dGlscy9nZXQtc2x1Z3MuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBTyxNQUFNQSxXQUFXLENBQUNDLFNBQVc7SUFDbEMsTUFBTUMsWUFBWUMsS0FBS0MsR0FBRyxJQUFJSCxPQUFPSSxHQUFHLENBQUMsQ0FBQ0MsUUFBVUEsTUFBTUMsSUFBSTtJQUM5RCxNQUFNQyxXQUFXTCxLQUFLTSxHQUFHLElBQUlSLE9BQU9JLEdBQUcsQ0FBQyxDQUFDQyxRQUFVQSxNQUFNQyxJQUFJO0lBQzdELE1BQU1HLGFBQWFQLEtBQUtDLEdBQUcsSUFDdEJILE9BQ0FVLE1BQU0sQ0FBQyxDQUFDTCxRQUFVQSxNQUFNQyxJQUFJLEtBQUtMLFdBQ2pDRyxHQUFHLENBQUMsQ0FBQ0MsUUFBVUEsTUFBTU0sS0FBSztJQUUvQixNQUFNQyxZQUFZVixLQUFLTSxHQUFHLElBQ3JCUixPQUNBVSxNQUFNLENBQUMsQ0FBQ0wsUUFBVUEsTUFBTUMsSUFBSSxLQUFLQyxVQUNqQ0gsR0FBRyxDQUFDLENBQUNDLFFBQVVBLE1BQU1NLEtBQUs7SUFHL0IsT0FBTztRQUNMVjtRQUNBTTtRQUNBRTtRQUNBRztJQUNGO0FBQ0YsRUFBRTtBQUVLLE1BQU1DLFdBQVcsQ0FBQ2IsU0FBVztJQUNsQyxNQUFNLEVBQUVDLFVBQVMsRUFBRU0sU0FBUSxFQUFFRSxXQUFVLEVBQUVHLFVBQVMsRUFBRSxHQUFHYixTQUFTQztJQUVoRSxNQUFNYyxjQUFjLENBQUNQLFdBQVdOLFNBQVEsSUFBSyxLQUFLVyxZQUFZSCxhQUFhO0lBRTNFLE1BQU1NLFFBQVEsRUFBRTtJQUNoQixJQUFLLElBQUlDLElBQUksR0FBR0EsSUFBSUYsYUFBYUUsS0FBSyxFQUFHO1FBQ3ZDLE1BQU1WLE9BQU9MLFlBQVlDLEtBQUtlLEtBQUssQ0FBQyxDQUFDUixhQUFhLElBQUlPLENBQUFBLElBQUs7UUFDM0QsTUFBTUwsUUFBUSxDQUFFRixhQUFhLElBQUlPLENBQUFBLElBQUssS0FBTTtRQUU1Q0QsTUFBTUcsSUFBSSxDQUFDO1lBQ1RDLFFBQVE7Z0JBQ05DLE1BQU07b0JBQUMsQ0FBQyxFQUFFZCxLQUFLLENBQUM7b0JBQUUsQ0FBQyxFQUFFSyxNQUFNLENBQUM7aUJBQUM7WUFDL0I7UUFDRjtJQUNGO0lBRUEsT0FBT0k7QUFDVCxFQUFFIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL3V0aWxzL2dldC1zbHVncy5qcz85N2VkIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBnZXREYXRlcyA9IChvcmRlcnMpID0+IHtcbiAgY29uc3QgZmlyc3RZZWFyID0gTWF0aC5taW4oLi4ub3JkZXJzLm1hcCgob3JkZXIpID0+IG9yZGVyLnllYXIpKTtcbiAgY29uc3QgbGFzdFllYXIgPSBNYXRoLm1heCguLi5vcmRlcnMubWFwKChvcmRlcikgPT4gb3JkZXIueWVhcikpO1xuICBjb25zdCBmaXJzdE1vbnRoID0gTWF0aC5taW4oXG4gICAgLi4ub3JkZXJzXG4gICAgICAuZmlsdGVyKChvcmRlcikgPT4gb3JkZXIueWVhciA9PT0gZmlyc3RZZWFyKVxuICAgICAgLm1hcCgob3JkZXIpID0+IG9yZGVyLm1vbnRoKSxcbiAgKTtcbiAgY29uc3QgbGFzdE1vbnRoID0gTWF0aC5tYXgoXG4gICAgLi4ub3JkZXJzXG4gICAgICAuZmlsdGVyKChvcmRlcikgPT4gb3JkZXIueWVhciA9PT0gbGFzdFllYXIpXG4gICAgICAubWFwKChvcmRlcikgPT4gb3JkZXIubW9udGgpLFxuICApO1xuXG4gIHJldHVybiB7XG4gICAgZmlyc3RZZWFyLFxuICAgIGxhc3RZZWFyLFxuICAgIGZpcnN0TW9udGgsXG4gICAgbGFzdE1vbnRoLFxuICB9O1xufTtcblxuZXhwb3J0IGNvbnN0IGdldFNsdWdzID0gKG9yZGVycykgPT4ge1xuICBjb25zdCB7IGZpcnN0WWVhciwgbGFzdFllYXIsIGZpcnN0TW9udGgsIGxhc3RNb250aCB9ID0gZ2V0RGF0ZXMob3JkZXJzKTtcblxuICBjb25zdCB0b3RhbE1vbnRocyA9IChsYXN0WWVhciAtIGZpcnN0WWVhcikgKiAxMiArIGxhc3RNb250aCAtIGZpcnN0TW9udGggKyAxO1xuXG4gIGNvbnN0IHNsdWdzID0gW107XG4gIGZvciAobGV0IG0gPSAwOyBtIDwgdG90YWxNb250aHM7IG0gKz0gMSkge1xuICAgIGNvbnN0IHllYXIgPSBmaXJzdFllYXIgKyBNYXRoLmZsb29yKChmaXJzdE1vbnRoIC0gMSArIG0pIC8gMTIpO1xuICAgIGNvbnN0IG1vbnRoID0gKChmaXJzdE1vbnRoIC0gMSArIG0pICUgMTIpICsgMTtcblxuICAgIHNsdWdzLnB1c2goe1xuICAgICAgcGFyYW1zOiB7XG4gICAgICAgIHNsdWc6IFtgJHt5ZWFyfWAsIGAke21vbnRofWBdLFxuICAgICAgfSxcbiAgICB9KTtcbiAgfVxuXG4gIHJldHVybiBzbHVncztcbn07XG4iXSwibmFtZXMiOlsiZ2V0RGF0ZXMiLCJvcmRlcnMiLCJmaXJzdFllYXIiLCJNYXRoIiwibWluIiwibWFwIiwib3JkZXIiLCJ5ZWFyIiwibGFzdFllYXIiLCJtYXgiLCJmaXJzdE1vbnRoIiwiZmlsdGVyIiwibW9udGgiLCJsYXN0TW9udGgiLCJnZXRTbHVncyIsInRvdGFsTW9udGhzIiwic2x1Z3MiLCJtIiwiZmxvb3IiLCJwdXNoIiwicGFyYW1zIiwic2x1ZyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./utils/get-slugs.js\n");</span>
+&nbsp;
+/***/ })
+&nbsp;
+};
+;
+&nbsp;
+// load runtime
+var __webpack_require__ = <span class="cstat-no" title="statement not covered" >require("../webpack-runtime.js");</span>
+<span class="cstat-no" title="statement not covered" >__webpack_require__.C(exports);</span>
+var __webpack_exec__ = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(m</span>oduleId) =&gt; (<span class="cstat-no" title="statement not covered" >__webpack_require__(__webpack_require__.s = moduleId))</span></span>
+var __webpack_exports__ = (<span class="cstat-no" title="statement not covered" >__webpack_exec__("./pages/index.js"));</span>
+<span class="cstat-no" title="statement not covered" >module.exports = __webpack_exports__;</span>
+&nbsp;
+})();</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-04-20T13:51:30.360Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

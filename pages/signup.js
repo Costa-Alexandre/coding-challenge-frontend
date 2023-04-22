@@ -1,17 +1,17 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../contexts/Auth/auth';
+import { useAuth } from '../contexts/Auth';
 
 export default function SignUp() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
-  const { signup } = useContext(AuthContext);
+  const { signup, loading, setLoading } = useAuth();
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  // eslint-disable-next-line consistent-return
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -19,15 +19,15 @@ export default function SignUp() {
       return setError('Passwords do not match');
     }
 
+    setLoading(true);
     try {
       setError('');
-      setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
       router.push('/');
     } catch {
       setError('Failed to create an account');
+      return setLoading(false);
     }
-    return setLoading(false);
   };
 
   return (

@@ -1,21 +1,20 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../contexts/Auth/auth';
+import { useAuth } from '../contexts/Auth';
 
 export default function ForgotPassword() {
   const emailRef = useRef(null);
-  const { resetPassword } = useContext(AuthContext);
+  const { resetPassword, loading, setLoading } = useAuth();
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       setError('');
-      setLoading(true);
       await resetPassword(emailRef.current.value);
       router.push({
         pathname: '/login',
@@ -23,8 +22,8 @@ export default function ForgotPassword() {
       });
     } catch {
       setError('Failed to sign in');
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

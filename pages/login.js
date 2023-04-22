@@ -1,29 +1,28 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../contexts/Auth/auth';
+import { useAuth } from '../contexts/Auth';
 
 export default function Login() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const { login } = useContext(AuthContext);
+  const { login, loading, setLoading } = useAuth();
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { message } = router.query;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       setError('');
-      setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       router.push('/');
     } catch {
       setError('Failed to sign in');
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

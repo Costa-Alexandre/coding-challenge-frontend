@@ -1,0 +1,634 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for coding-challenge-frontend-react/.next/server/pages/_app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">coding-challenge-frontend-react/.next/server/pages</a> _app.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/28</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/20</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/24</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+var exports = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >exports.id = "pages/_app";</span>
+<span class="cstat-no" title="statement not covered" >exports.ids = ["pages/_app"];</span>
+<span class="cstat-no" title="statement not covered" >exports.modules = {</span>
+&nbsp;
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratLight\"}":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"fonts/index.js","import":"Montserrat","arguments":[{"weight":["300"],"subsets":["latin"]}],"variableName":"montserratLight"} ***!
+  \****************************************************************************************************************************************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Montserrat_af5f77', '__Montserrat_Fallback_af5f77'\",\"fontWeight\":300,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_af5f77\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImZvbnRzL2luZGV4LmpzXCIsXCJpbXBvcnRcIjpcIk1vbnRzZXJyYXRcIixcImFyZ3VtZW50c1wiOlt7XCJ3ZWlnaHRcIjpbXCIzMDBcIl0sXCJzdWJzZXRzXCI6W1wibGF0aW5cIl19XSxcInZhcmlhYmxlTmFtZVwiOlwibW9udHNlcnJhdExpZ2h0XCJ9LmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSxXQUFXLDJHQUEyRztBQUN0SDtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL25vZGVfbW9kdWxlcy9uZXh0L2ZvbnQvZ29vZ2xlL3RhcmdldC5jc3M/NmJlZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJzdHlsZVwiOiB7XCJmb250RmFtaWx5XCI6XCInX19Nb250c2VycmF0X2FmNWY3NycsICdfX01vbnRzZXJyYXRfRmFsbGJhY2tfYWY1Zjc3J1wiLFwiZm9udFdlaWdodFwiOjMwMCxcImZvbnRTdHlsZVwiOlwibm9ybWFsXCJ9LFxuXHRcImNsYXNzTmFtZVwiOiBcIl9fY2xhc3NOYW1lX2FmNWY3N1wiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratLight\"}\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"400\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratNormal\"}":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"fonts/index.js","import":"Montserrat","arguments":[{"weight":["400"],"subsets":["latin"]}],"variableName":"montserratNormal"} ***!
+  \*****************************************************************************************************************************************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Montserrat_e9c859', '__Montserrat_Fallback_e9c859'\",\"fontWeight\":400,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_e9c859\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImZvbnRzL2luZGV4LmpzXCIsXCJpbXBvcnRcIjpcIk1vbnRzZXJyYXRcIixcImFyZ3VtZW50c1wiOlt7XCJ3ZWlnaHRcIjpbXCI0MDBcIl0sXCJzdWJzZXRzXCI6W1wibGF0aW5cIl19XSxcInZhcmlhYmxlTmFtZVwiOlwibW9udHNlcnJhdE5vcm1hbFwifS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0EsV0FBVywyR0FBMkc7QUFDdEg7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2NvZGluZy1jaGFsbGVuZ2UtZnJvbnRlbmQtcmVhY3QvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP2VjMmMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwic3R5bGVcIjoge1wiZm9udEZhbWlseVwiOlwiJ19fTW9udHNlcnJhdF9lOWM4NTknLCAnX19Nb250c2VycmF0X0ZhbGxiYWNrX2U5Yzg1OSdcIixcImZvbnRXZWlnaHRcIjo0MDAsXCJmb250U3R5bGVcIjpcIm5vcm1hbFwifSxcblx0XCJjbGFzc05hbWVcIjogXCJfX2NsYXNzTmFtZV9lOWM4NTlcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"400\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratNormal\"}\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"600\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratBold\"}":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"fonts/index.js","import":"Montserrat","arguments":[{"weight":["600"],"subsets":["latin"]}],"variableName":"montserratBold"} ***!
+  \***************************************************************************************************************************************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Montserrat_24ae08', '__Montserrat_Fallback_24ae08'\",\"fontWeight\":600,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_24ae08\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImZvbnRzL2luZGV4LmpzXCIsXCJpbXBvcnRcIjpcIk1vbnRzZXJyYXRcIixcImFyZ3VtZW50c1wiOlt7XCJ3ZWlnaHRcIjpbXCI2MDBcIl0sXCJzdWJzZXRzXCI6W1wibGF0aW5cIl19XSxcInZhcmlhYmxlTmFtZVwiOlwibW9udHNlcnJhdEJvbGRcIn0uanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBLFdBQVcsMkdBQTJHO0FBQ3RIO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb2RpbmctY2hhbGxlbmdlLWZyb250ZW5kLXJlYWN0Ly4vbm9kZV9tb2R1bGVzL25leHQvZm9udC9nb29nbGUvdGFyZ2V0LmNzcz85YWQzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInN0eWxlXCI6IHtcImZvbnRGYW1pbHlcIjpcIidfX01vbnRzZXJyYXRfMjRhZTA4JywgJ19fTW9udHNlcnJhdF9GYWxsYmFja18yNGFlMDgnXCIsXCJmb250V2VpZ2h0XCI6NjAwLFwiZm9udFN0eWxlXCI6XCJub3JtYWxcIn0sXG5cdFwiY2xhc3NOYW1lXCI6IFwiX19jbGFzc05hbWVfMjRhZTA4XCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"600\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratBold\"}\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"robotoLight\"}":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"fonts/index.js","import":"Roboto","arguments":[{"weight":["300"],"subsets":["latin"]}],"variableName":"robotoLight"} ***!
+  \********************************************************************************************************************************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Roboto_9fc607', '__Roboto_Fallback_9fc607'\",\"fontWeight\":300,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_9fc607\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImZvbnRzL2luZGV4LmpzXCIsXCJpbXBvcnRcIjpcIlJvYm90b1wiLFwiYXJndW1lbnRzXCI6W3tcIndlaWdodFwiOltcIjMwMFwiXSxcInN1YnNldHNcIjpbXCJsYXRpblwiXX1dLFwidmFyaWFibGVOYW1lXCI6XCJyb2JvdG9MaWdodFwifS5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0EsV0FBVyxtR0FBbUc7QUFDOUc7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2NvZGluZy1jaGFsbGVuZ2UtZnJvbnRlbmQtcmVhY3QvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzPzE3MTYiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwic3R5bGVcIjoge1wiZm9udEZhbWlseVwiOlwiJ19fUm9ib3RvXzlmYzYwNycsICdfX1JvYm90b19GYWxsYmFja185ZmM2MDcnXCIsXCJmb250V2VpZ2h0XCI6MzAwLFwiZm9udFN0eWxlXCI6XCJub3JtYWxcIn0sXG5cdFwiY2xhc3NOYW1lXCI6IFwiX19jbGFzc05hbWVfOWZjNjA3XCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"robotoLight\"}\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"700\"],\"subsets\":[\"latin\"]}],\"variableName\":\"roboto\"}":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"fonts/index.js","import":"Roboto","arguments":[{"weight":["700"],"subsets":["latin"]}],"variableName":"roboto"} ***!
+  \***************************************************************************************************************************************************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Roboto_93018d', '__Roboto_Fallback_93018d'\",\"fontWeight\":700,\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_93018d\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImZvbnRzL2luZGV4LmpzXCIsXCJpbXBvcnRcIjpcIlJvYm90b1wiLFwiYXJndW1lbnRzXCI6W3tcIndlaWdodFwiOltcIjcwMFwiXSxcInN1YnNldHNcIjpbXCJsYXRpblwiXX1dLFwidmFyaWFibGVOYW1lXCI6XCJyb2JvdG9cIn0uanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBLFdBQVcsbUdBQW1HO0FBQzlHO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb2RpbmctY2hhbGxlbmdlLWZyb250ZW5kLXJlYWN0Ly4vbm9kZV9tb2R1bGVzL25leHQvZm9udC9nb29nbGUvdGFyZ2V0LmNzcz9jMDI0Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInN0eWxlXCI6IHtcImZvbnRGYW1pbHlcIjpcIidfX1JvYm90b185MzAxOGQnLCAnX19Sb2JvdG9fRmFsbGJhY2tfOTMwMThkJ1wiLFwiZm9udFdlaWdodFwiOjcwMCxcImZvbnRTdHlsZVwiOlwibm9ybWFsXCJ9LFxuXHRcImNsYXNzTmFtZVwiOiBcIl9fY2xhc3NOYW1lXzkzMDE4ZFwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"700\"],\"subsets\":[\"latin\"]}],\"variableName\":\"roboto\"}\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./contexts/Auth/firebase.js":
+/*!***********************************!*\
+  !*** ./contexts/Auth/firebase.js ***!
+  \***********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"auth\": () =&gt; (/* binding */ auth),\n/* harmony export */   \"database\": () =&gt; (/* binding */ database),\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"firebase/app\");\n/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/auth */ \"firebase/auth\");\n/* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/database */ \"firebase/database\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_auth__WEBPACK_IMPORTED_MODULE_1__, firebase_database__WEBPACK_IMPORTED_MODULE_2__]);\n([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_auth__WEBPACK_IMPORTED_MODULE_1__, firebase_database__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\nconst firebaseConfig = {\n    apiKey: \"AIzaSyDZ3IK6Ti8tQyc-dpUR56osmmzQxwSBKlg\",\n    authDomain: \"coding-challenge-next.firebaseapp.com\",\n    projectId: \"coding-challenge-next\",\n    storageBucket: \"coding-challenge-next.appspot.com\",\n    messagingSenderId: \"339686468727\",\n    appId: \"1:339686468727:web:3d992eaefda38aeff9aa72\",\n    databaseURL: \"https://coding-challenge-next-default-rtdb.europe-west1.firebasedatabase.app\"\n};\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_1__.getAuth)(app);\nconst database = (0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.getDatabase)(app);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0cy9BdXRoL2ZpcmViYXNlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUE2QztBQUNMO0FBQ1E7QUFFaEQsTUFBTUcsaUJBQWlCO0lBQ3JCQyxRQUFRQyx5Q0FBb0M7SUFDNUNHLFlBQVlILHVDQUE0QztJQUN4REssV0FBV0wsdUJBQTJDO0lBQ3RETyxlQUFlUCxtQ0FBK0M7SUFDOURTLG1CQUFtQlQsY0FBb0Q7SUFDdkVXLE9BQU9YLDJDQUF1QztJQUM5Q2EsYUFBYWIsOEVBQTZDO0FBQzVEO0FBRUEsTUFBTWUsTUFBTXBCLDJEQUFhQSxDQUFDRztBQUVuQixNQUFNa0IsT0FBT3BCLHNEQUFPQSxDQUFDbUIsS0FBSztBQUMxQixNQUFNRSxXQUFXcEIsOERBQVdBLENBQUNrQixLQUFLO0FBQ3pDLGlFQUFlQSxHQUFHQSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL2NvbnRleHRzL0F1dGgvZmlyZWJhc2UuanM/MmYyMiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBpbml0aWFsaXplQXBwIH0gZnJvbSAnZmlyZWJhc2UvYXBwJztcbmltcG9ydCB7IGdldEF1dGggfSBmcm9tICdmaXJlYmFzZS9hdXRoJztcbmltcG9ydCB7IGdldERhdGFiYXNlIH0gZnJvbSAnZmlyZWJhc2UvZGF0YWJhc2UnO1xuXG5jb25zdCBmaXJlYmFzZUNvbmZpZyA9IHtcbiAgYXBpS2V5OiBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19GSVJFQkFTRV9LRVksXG4gIGF1dGhEb21haW46IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0ZJUkVCQVNFX0FVVEhfRE9NQUlOLFxuICBwcm9qZWN0SWQ6IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0ZJUkVCQVNFX1BST0pFQ1RfSUQsXG4gIHN0b3JhZ2VCdWNrZXQ6IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0ZJUkVCQVNFX1NUT1JBR0VfQlVDS0VULFxuICBtZXNzYWdpbmdTZW5kZXJJZDogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfRklSRUJBU0VfTUVTU0FHSU5HX1NFTkRFUl9JRCxcbiAgYXBwSWQ6IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0ZJUkVCQVNFX0FQUF9JRCxcbiAgZGF0YWJhc2VVUkw6IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0ZJUkVCQVNFX0RBVEFCQVNFX1VSTCxcbn07XG5cbmNvbnN0IGFwcCA9IGluaXRpYWxpemVBcHAoZmlyZWJhc2VDb25maWcpO1xuXG5leHBvcnQgY29uc3QgYXV0aCA9IGdldEF1dGgoYXBwKTtcbmV4cG9ydCBjb25zdCBkYXRhYmFzZSA9IGdldERhdGFiYXNlKGFwcCk7XG5leHBvcnQgZGVmYXVsdCBhcHA7XG4iXSwibmFtZXMiOlsiaW5pdGlhbGl6ZUFwcCIsImdldEF1dGgiLCJnZXREYXRhYmFzZSIsImZpcmViYXNlQ29uZmlnIiwiYXBpS2V5IiwicHJvY2VzcyIsImVudiIsIk5FWFRfUFVCTElDX0ZJUkVCQVNFX0tFWSIsImF1dGhEb21haW4iLCJORVhUX1BVQkxJQ19GSVJFQkFTRV9BVVRIX0RPTUFJTiIsInByb2plY3RJZCIsIk5FWFRfUFVCTElDX0ZJUkVCQVNFX1BST0pFQ1RfSUQiLCJzdG9yYWdlQnVja2V0IiwiTkVYVF9QVUJMSUNfRklSRUJBU0VfU1RPUkFHRV9CVUNLRVQiLCJtZXNzYWdpbmdTZW5kZXJJZCIsIk5FWFRfUFVCTElDX0ZJUkVCQVNFX01FU1NBR0lOR19TRU5ERVJfSUQiLCJhcHBJZCIsIk5FWFRfUFVCTElDX0ZJUkVCQVNFX0FQUF9JRCIsImRhdGFiYXNlVVJMIiwiTkVYVF9QVUJMSUNfRklSRUJBU0VfREFUQUJBU0VfVVJMIiwiYXBwIiwiYXV0aCIsImRhdGFiYXNlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./contexts/Auth/firebase.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./contexts/Auth/index.js":
+/*!********************************!*\
+  !*** ./contexts/Auth/index.js ***!
+  \********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"useAuth\": () =&gt; (/* binding */ useAuth)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/auth */ \"firebase/auth\");\n/* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/database */ \"firebase/database\");\n/* harmony import */ var _firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./firebase */ \"./contexts/Auth/firebase.js\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([firebase_auth__WEBPACK_IMPORTED_MODULE_2__, firebase_database__WEBPACK_IMPORTED_MODULE_3__, _firebase__WEBPACK_IMPORTED_MODULE_4__]);\n([firebase_auth__WEBPACK_IMPORTED_MODULE_2__, firebase_database__WEBPACK_IMPORTED_MODULE_3__, _firebase__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\n\n\nconst AuthContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_1__.createContext)();\nfunction AuthProvider({ children  }) {\n    const [currentUser, setCurrentUser] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const login = (email, password)=&gt;(0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.signInWithEmailAndPassword)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth, email, password);\n    const logout = ()=&gt;(0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.signOut)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth);\n    const resetPassword = (email)=&gt;(0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.sendPasswordResetEmail)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth, email);\n    const updateUserDisplayName = (name)=&gt;(0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.updateProfile)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth.currentUser, {\n            displayName: name\n        });\n    const updateUserPassword = (password)=&gt;(0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.updatePassword)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth.currentUser, password);\n    const writeUserRole = (role)=&gt;{\n        const { uid , email  } = currentUser;\n        const reference = (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.ref)(_firebase__WEBPACK_IMPORTED_MODULE_4__.database, `users/${uid}`);\n        (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.set)(reference, {\n            role,\n            email\n        });\n    };\n    const getUserRole = async ()=&gt;{\n        const { uid  } = currentUser;\n        const reference = (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.ref)(_firebase__WEBPACK_IMPORTED_MODULE_4__.database, `users/${uid}`);\n        const snapshot = await (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.get)(reference);\n        if (snapshot.exists()) {\n            const { role  } = snapshot.val();\n            return role;\n        }\n        return \"reader\";\n    };\n    const signup = async (email, name, role, password)=&gt;{\n        try {\n            await (0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.createUserWithEmailAndPassword)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth, email, password);\n            await updateUserDisplayName(name);\n            await writeUserRole(role);\n        } catch (error) {\n        // TODO: Handle error\n        }\n    };\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=&gt;{\n        const unsubscribe = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_2__.onAuthStateChanged)(_firebase__WEBPACK_IMPORTED_MODULE_4__.auth, async (user)=&gt;{\n            setCurrentUser(user);\n            return unsubscribe;\n        });\n    }, []);\n    const value = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=&gt;({\n            currentUser,\n            setCurrentUser,\n            login,\n            logout,\n            signup,\n            resetPassword,\n            updateUserDisplayName,\n            updateUserPassword,\n            getUserRole,\n            writeUserRole\n        }), [\n        currentUser\n    ]);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(AuthContext.Provider, {\n        value: value,\n        children: children\n    }, void 0, false, {\n        fileName: \"/Users/zymmac/repos/coding-challenge-frontend-react/contexts/Auth/index.js\",\n        lineNumber: 86,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthProvider);\nconst useAuth = ()=&gt;(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(AuthContext);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0cy9BdXRoL2luZGV4LmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFNZTtBQVNRO0FBQzJCO0FBQ047QUFFNUMsTUFBTWtCLDRCQUFjZCxvREFBYUE7QUFFakMsU0FBU2UsYUFBYSxFQUFFQyxTQUFRLEVBQUUsRUFBRTtJQUNsQyxNQUFNLENBQUNDLGFBQWFDLGVBQWUsR0FBR3JCLCtDQUFRQTtJQUU5QyxNQUFNc0IsUUFBUSxDQUFDQyxPQUFPQyxXQUFhbkIseUVBQTBCQSxDQUFDVSwyQ0FBSUEsRUFBRVEsT0FBT0M7SUFFM0UsTUFBTUMsU0FBUyxJQUFNbEIsc0RBQU9BLENBQUNRLDJDQUFJQTtJQUVqQyxNQUFNVyxnQkFBZ0IsQ0FBQ0gsUUFBVWQscUVBQXNCQSxDQUFDTSwyQ0FBSUEsRUFBRVE7SUFFOUQsTUFBTUksd0JBQXdCLENBQUNDLE9BQVNsQiw0REFBYUEsQ0FBQ0ssdURBQWdCLEVBQUU7WUFBRWMsYUFBYUQ7UUFBSztJQUU1RixNQUFNRSxxQkFBcUIsQ0FBQ04sV0FBYWIsNkRBQWNBLENBQUNJLHVEQUFnQixFQUFFUztJQUUxRSxNQUFNTyxnQkFBZ0IsQ0FBQ0MsT0FBUztRQUM5QixNQUFNLEVBQUVDLElBQUcsRUFBRVYsTUFBSyxFQUFFLEdBQUdIO1FBQ3ZCLE1BQU1jLFlBQVl0QixzREFBR0EsQ0FBQ0ksK0NBQVFBLEVBQUUsQ0FBQyxNQUFNLEVBQUVpQixJQUFJLENBQUM7UUFDOUNwQixzREFBR0EsQ0FBQ3FCLFdBQVc7WUFBRUY7WUFBTVQ7UUFBTTtJQUMvQjtJQUVBLE1BQU1ZLGNBQWMsVUFBWTtRQUM5QixNQUFNLEVBQUVGLElBQUcsRUFBRSxHQUFHYjtRQUNoQixNQUFNYyxZQUFZdEIsc0RBQUdBLENBQUNJLCtDQUFRQSxFQUFFLENBQUMsTUFBTSxFQUFFaUIsSUFBSSxDQUFDO1FBQzlDLE1BQU1HLFdBQVcsTUFBTXRCLHNEQUFHQSxDQUFDb0I7UUFDM0IsSUFBSUUsU0FBU0MsTUFBTSxJQUFJO1lBQ3JCLE1BQU0sRUFBRUwsS0FBSSxFQUFFLEdBQUdJLFNBQVNFLEdBQUc7WUFDN0IsT0FBT047UUFDVCxDQUFDO1FBQ0QsT0FBTztJQUNUO0lBRUEsTUFBTU8sU0FBUyxPQUFPaEIsT0FBT0ssTUFBTUksTUFBTVIsV0FBYTtRQUNwRCxJQUFJO1lBQ0YsTUFBTWhCLDZFQUE4QkEsQ0FBQ08sMkNBQUlBLEVBQUVRLE9BQU9DO1lBQ2xELE1BQU1HLHNCQUFzQkM7WUFDNUIsTUFBTUcsY0FBY0M7UUFDdEIsRUFBRSxPQUFPUSxPQUFPO1FBQ2QscUJBQXFCO1FBQ3ZCO0lBQ0Y7SUFFQXZDLGdEQUFTQSxDQUFDLElBQU07UUFDZCxNQUFNd0MsY0FBY25DLGlFQUFrQkEsQ0FBQ1MsMkNBQUlBLEVBQUUsT0FBTzJCLE9BQVM7WUFDM0RyQixlQUFlcUI7WUFFZixPQUFPRDtRQUNUO0lBQ0YsR0FBRyxFQUFFO0lBRUwsTUFBTUUsUUFBUXpDLDhDQUFPQSxDQUNuQixJQUFPO1lBQ0xrQjtZQUNBQztZQUNBQztZQUNBRztZQUNBYztZQUNBYjtZQUNBQztZQUNBRztZQUNBSztZQUNBSjtRQUNGLElBQ0E7UUFBQ1g7S0FBWTtJQUdmLHFCQUFPLDhEQUFDSCxZQUFZMkIsUUFBUTtRQUFDRCxPQUFPQTtrQkFBUXhCOzs7Ozs7QUFDOUM7QUFFQSxpRUFBZUQsWUFBWUEsRUFBQztBQUNyQixNQUFNMkIsVUFBVSxJQUFNekMsaURBQVVBLENBQUNhLGFBQWEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb2RpbmctY2hhbGxlbmdlLWZyb250ZW5kLXJlYWN0Ly4vY29udGV4dHMvQXV0aC9pbmRleC5qcz8wZjQ5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwge1xuICB1c2VTdGF0ZSxcbiAgdXNlRWZmZWN0LFxuICB1c2VNZW1vLFxuICBjcmVhdGVDb250ZXh0LFxuICB1c2VDb250ZXh0LFxufSBmcm9tICdyZWFjdCc7XG5pbXBvcnQge1xuICBzaWduSW5XaXRoRW1haWxBbmRQYXNzd29yZCxcbiAgb25BdXRoU3RhdGVDaGFuZ2VkLFxuICBzaWduT3V0LFxuICBjcmVhdGVVc2VyV2l0aEVtYWlsQW5kUGFzc3dvcmQsXG4gIHNlbmRQYXNzd29yZFJlc2V0RW1haWwsXG4gIHVwZGF0ZVByb2ZpbGUsXG4gIHVwZGF0ZVBhc3N3b3JkLFxufSBmcm9tICdmaXJlYmFzZS9hdXRoJztcbmltcG9ydCB7IHJlZiwgc2V0LCBnZXQgfSBmcm9tICdmaXJlYmFzZS9kYXRhYmFzZSc7XG5pbXBvcnQgeyBhdXRoLCBkYXRhYmFzZSB9IGZyb20gJy4vZmlyZWJhc2UnO1xuXG5jb25zdCBBdXRoQ29udGV4dCA9IGNyZWF0ZUNvbnRleHQoKTtcblxuZnVuY3Rpb24gQXV0aFByb3ZpZGVyKHsgY2hpbGRyZW4gfSkge1xuICBjb25zdCBbY3VycmVudFVzZXIsIHNldEN1cnJlbnRVc2VyXSA9IHVzZVN0YXRlKCk7XG5cbiAgY29uc3QgbG9naW4gPSAoZW1haWwsIHBhc3N3b3JkKSA9PiBzaWduSW5XaXRoRW1haWxBbmRQYXNzd29yZChhdXRoLCBlbWFpbCwgcGFzc3dvcmQpO1xuXG4gIGNvbnN0IGxvZ291dCA9ICgpID0+IHNpZ25PdXQoYXV0aCk7XG5cbiAgY29uc3QgcmVzZXRQYXNzd29yZCA9IChlbWFpbCkgPT4gc2VuZFBhc3N3b3JkUmVzZXRFbWFpbChhdXRoLCBlbWFpbCk7XG5cbiAgY29uc3QgdXBkYXRlVXNlckRpc3BsYXlOYW1lID0gKG5hbWUpID0+IHVwZGF0ZVByb2ZpbGUoYXV0aC5jdXJyZW50VXNlciwgeyBkaXNwbGF5TmFtZTogbmFtZSB9KTtcblxuICBjb25zdCB1cGRhdGVVc2VyUGFzc3dvcmQgPSAocGFzc3dvcmQpID0+IHVwZGF0ZVBhc3N3b3JkKGF1dGguY3VycmVudFVzZXIsIHBhc3N3b3JkKTtcblxuICBjb25zdCB3cml0ZVVzZXJSb2xlID0gKHJvbGUpID0+IHtcbiAgICBjb25zdCB7IHVpZCwgZW1haWwgfSA9IGN1cnJlbnRVc2VyO1xuICAgIGNvbnN0IHJlZmVyZW5jZSA9IHJlZihkYXRhYmFzZSwgYHVzZXJzLyR7dWlkfWApO1xuICAgIHNldChyZWZlcmVuY2UsIHsgcm9sZSwgZW1haWwgfSk7XG4gIH07XG5cbiAgY29uc3QgZ2V0VXNlclJvbGUgPSBhc3luYyAoKSA9PiB7XG4gICAgY29uc3QgeyB1aWQgfSA9IGN1cnJlbnRVc2VyO1xuICAgIGNvbnN0IHJlZmVyZW5jZSA9IHJlZihkYXRhYmFzZSwgYHVzZXJzLyR7dWlkfWApO1xuICAgIGNvbnN0IHNuYXBzaG90ID0gYXdhaXQgZ2V0KHJlZmVyZW5jZSk7XG4gICAgaWYgKHNuYXBzaG90LmV4aXN0cygpKSB7XG4gICAgICBjb25zdCB7IHJvbGUgfSA9IHNuYXBzaG90LnZhbCgpO1xuICAgICAgcmV0dXJuIHJvbGU7XG4gICAgfVxuICAgIHJldHVybiAncmVhZGVyJztcbiAgfTtcblxuICBjb25zdCBzaWdudXAgPSBhc3luYyAoZW1haWwsIG5hbWUsIHJvbGUsIHBhc3N3b3JkKSA9PiB7XG4gICAgdHJ5IHtcbiAgICAgIGF3YWl0IGNyZWF0ZVVzZXJXaXRoRW1haWxBbmRQYXNzd29yZChhdXRoLCBlbWFpbCwgcGFzc3dvcmQpO1xuICAgICAgYXdhaXQgdXBkYXRlVXNlckRpc3BsYXlOYW1lKG5hbWUpO1xuICAgICAgYXdhaXQgd3JpdGVVc2VyUm9sZShyb2xlKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgLy8gVE9ETzogSGFuZGxlIGVycm9yXG4gICAgfVxuICB9O1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgY29uc3QgdW5zdWJzY3JpYmUgPSBvbkF1dGhTdGF0ZUNoYW5nZWQoYXV0aCwgYXN5bmMgKHVzZXIpID0+IHtcbiAgICAgIHNldEN1cnJlbnRVc2VyKHVzZXIpO1xuXG4gICAgICByZXR1cm4gdW5zdWJzY3JpYmU7XG4gICAgfSk7XG4gIH0sIFtdKTtcblxuICBjb25zdCB2YWx1ZSA9IHVzZU1lbW8oXG4gICAgKCkgPT4gKHtcbiAgICAgIGN1cnJlbnRVc2VyLFxuICAgICAgc2V0Q3VycmVudFVzZXIsXG4gICAgICBsb2dpbixcbiAgICAgIGxvZ291dCxcbiAgICAgIHNpZ251cCxcbiAgICAgIHJlc2V0UGFzc3dvcmQsXG4gICAgICB1cGRhdGVVc2VyRGlzcGxheU5hbWUsXG4gICAgICB1cGRhdGVVc2VyUGFzc3dvcmQsXG4gICAgICBnZXRVc2VyUm9sZSxcbiAgICAgIHdyaXRlVXNlclJvbGUsXG4gICAgfSksXG4gICAgW2N1cnJlbnRVc2VyXSxcbiAgKTtcblxuICByZXR1cm4gPEF1dGhDb250ZXh0LlByb3ZpZGVyIHZhbHVlPXt2YWx1ZX0+e2NoaWxkcmVufTwvQXV0aENvbnRleHQuUHJvdmlkZXI+O1xufVxuXG5leHBvcnQgZGVmYXVsdCBBdXRoUHJvdmlkZXI7XG5leHBvcnQgY29uc3QgdXNlQXV0aCA9ICgpID0+IHVzZUNvbnRleHQoQXV0aENvbnRleHQpO1xuIl0sIm5hbWVzIjpbIlJlYWN0IiwidXNlU3RhdGUiLCJ1c2VFZmZlY3QiLCJ1c2VNZW1vIiwiY3JlYXRlQ29udGV4dCIsInVzZUNvbnRleHQiLCJzaWduSW5XaXRoRW1haWxBbmRQYXNzd29yZCIsIm9uQXV0aFN0YXRlQ2hhbmdlZCIsInNpZ25PdXQiLCJjcmVhdGVVc2VyV2l0aEVtYWlsQW5kUGFzc3dvcmQiLCJzZW5kUGFzc3dvcmRSZXNldEVtYWlsIiwidXBkYXRlUHJvZmlsZSIsInVwZGF0ZVBhc3N3b3JkIiwicmVmIiwic2V0IiwiZ2V0IiwiYXV0aCIsImRhdGFiYXNlIiwiQXV0aENvbnRleHQiLCJBdXRoUHJvdmlkZXIiLCJjaGlsZHJlbiIsImN1cnJlbnRVc2VyIiwic2V0Q3VycmVudFVzZXIiLCJsb2dpbiIsImVtYWlsIiwicGFzc3dvcmQiLCJsb2dvdXQiLCJyZXNldFBhc3N3b3JkIiwidXBkYXRlVXNlckRpc3BsYXlOYW1lIiwibmFtZSIsImRpc3BsYXlOYW1lIiwidXBkYXRlVXNlclBhc3N3b3JkIiwid3JpdGVVc2VyUm9sZSIsInJvbGUiLCJ1aWQiLCJyZWZlcmVuY2UiLCJnZXRVc2VyUm9sZSIsInNuYXBzaG90IiwiZXhpc3RzIiwidmFsIiwic2lnbnVwIiwiZXJyb3IiLCJ1bnN1YnNjcmliZSIsInVzZXIiLCJ2YWx1ZSIsIlByb3ZpZGVyIiwidXNlQXV0aCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./contexts/Auth/index.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./fonts/index.js":
+/*!************************!*\
+  !*** ./fonts/index.js ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"montserratBold\": () =&gt; (/* reexport default from dynamic */ next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_600_subsets_latin_variableName_montserratBold___WEBPACK_IMPORTED_MODULE_3___default.a),\n/* harmony export */   \"montserratLight\": () =&gt; (/* reexport default from dynamic */ next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_300_subsets_latin_variableName_montserratLight___WEBPACK_IMPORTED_MODULE_4___default.a),\n/* harmony export */   \"montserratNormal\": () =&gt; (/* reexport default from dynamic */ next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_400_subsets_latin_variableName_montserratNormal___WEBPACK_IMPORTED_MODULE_2___default.a),\n/* harmony export */   \"roboto\": () =&gt; (/* reexport default from dynamic */ next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_700_subsets_latin_variableName_roboto___WEBPACK_IMPORTED_MODULE_0___default.a),\n/* harmony export */   \"robotoLight\": () =&gt; (/* reexport default from dynamic */ next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_300_subsets_latin_variableName_robotoLight___WEBPACK_IMPORTED_MODULE_1___default.a)\n/* harmony export */ });\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_700_subsets_latin_variableName_roboto___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"700\"],\"subsets\":[\"latin\"]}],\"variableName\":\"roboto\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"fonts/index.js\\\",\\\"import\\\":\\\"Roboto\\\",\\\"arguments\\\":[{\\\"weight\\\":[\\\"700\\\"],\\\"subsets\\\":[\\\"latin\\\"]}],\\\"variableName\\\":\\\"roboto\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_700_subsets_latin_variableName_roboto___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_700_subsets_latin_variableName_roboto___WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_300_subsets_latin_variableName_robotoLight___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"robotoLight\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"fonts/index.js\\\",\\\"import\\\":\\\"Roboto\\\",\\\"arguments\\\":[{\\\"weight\\\":[\\\"300\\\"],\\\"subsets\\\":[\\\"latin\\\"]}],\\\"variableName\\\":\\\"robotoLight\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_300_subsets_latin_variableName_robotoLight___WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_fonts_index_js_import_Roboto_arguments_weight_300_subsets_latin_variableName_robotoLight___WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_400_subsets_latin_variableName_montserratNormal___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"400\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratNormal\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"fonts/index.js\\\",\\\"import\\\":\\\"Montserrat\\\",\\\"arguments\\\":[{\\\"weight\\\":[\\\"400\\\"],\\\"subsets\\\":[\\\"latin\\\"]}],\\\"variableName\\\":\\\"montserratNormal\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_400_subsets_latin_variableName_montserratNormal___WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_400_subsets_latin_variableName_montserratNormal___WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_600_subsets_latin_variableName_montserratBold___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"600\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratBold\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"fonts/index.js\\\",\\\"import\\\":\\\"Montserrat\\\",\\\"arguments\\\":[{\\\"weight\\\":[\\\"600\\\"],\\\"subsets\\\":[\\\"latin\\\"]}],\\\"variableName\\\":\\\"montserratBold\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_600_subsets_latin_variableName_montserratBold___WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_600_subsets_latin_variableName_montserratBold___WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_300_subsets_latin_variableName_montserratLight___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/font/google/target.css?{\"path\":\"fonts/index.js\",\"import\":\"Montserrat\",\"arguments\":[{\"weight\":[\"300\"],\"subsets\":[\"latin\"]}],\"variableName\":\"montserratLight\"} */ \"./node_modules/next/font/google/target.css?{\\\"path\\\":\\\"fonts/index.js\\\",\\\"import\\\":\\\"Montserrat\\\",\\\"arguments\\\":[{\\\"weight\\\":[\\\"300\\\"],\\\"subsets\\\":[\\\"latin\\\"]}],\\\"variableName\\\":\\\"montserratLight\\\"}\");\n/* harmony import */ var next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_300_subsets_latin_variableName_montserratLight___WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_font_google_target_css_path_fonts_index_js_import_Montserrat_arguments_weight_300_subsets_latin_variableName_montserratLight___WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9mb250cy9pbmRleC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFFYUE7QUFLQUM7QUFLQUM7QUFLQUM7QUFLQUM7QUFwQkFKO0FBS0FDO0FBS0FDO0FBS0FDO0FBS0FDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL2ZvbnRzL2luZGV4LmpzPzRiMTAiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUm9ib3RvLCBNb250c2VycmF0IH0gZnJvbSAnbmV4dC9mb250L2dvb2dsZSc7XG5cbmV4cG9ydCBjb25zdCByb2JvdG8gPSBSb2JvdG8oe1xuICB3ZWlnaHQ6IFsnNzAwJ10sXG4gIHN1YnNldHM6IFsnbGF0aW4nXSxcbn0pO1xuXG5leHBvcnQgY29uc3Qgcm9ib3RvTGlnaHQgPSBSb2JvdG8oe1xuICB3ZWlnaHQ6IFsnMzAwJ10sXG4gIHN1YnNldHM6IFsnbGF0aW4nXSxcbn0pO1xuXG5leHBvcnQgY29uc3QgbW9udHNlcnJhdE5vcm1hbCA9IE1vbnRzZXJyYXQoe1xuICB3ZWlnaHQ6IFsnNDAwJ10sXG4gIHN1YnNldHM6IFsnbGF0aW4nXSxcbn0pO1xuXG5leHBvcnQgY29uc3QgbW9udHNlcnJhdEJvbGQgPSBNb250c2VycmF0KHtcbiAgd2VpZ2h0OiBbJzYwMCddLFxuICBzdWJzZXRzOiBbJ2xhdGluJ10sXG59KTtcblxuZXhwb3J0IGNvbnN0IG1vbnRzZXJyYXRMaWdodCA9IE1vbnRzZXJyYXQoe1xuICB3ZWlnaHQ6IFsnMzAwJ10sXG4gIHN1YnNldHM6IFsnbGF0aW4nXSxcbn0pO1xuIl0sIm5hbWVzIjpbInJvYm90byIsInJvYm90b0xpZ2h0IiwibW9udHNlcnJhdE5vcm1hbCIsIm1vbnRzZXJyYXRCb2xkIiwibW9udHNlcnJhdExpZ2h0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./fonts/index.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (/* binding */ MyApp)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fonts */ \"./fonts/index.js\");\n/* harmony import */ var _contexts_Auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/Auth */ \"./contexts/Auth/index.js\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_contexts_Auth__WEBPACK_IMPORTED_MODULE_3__]);\n_contexts_Auth__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_contexts_Auth__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: _fonts__WEBPACK_IMPORTED_MODULE_2__.roboto.className,\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n                ...pageProps\n            }, void 0, false, {\n                fileName: \"/Users/zymmac/repos/coding-challenge-frontend-react/pages/_app.js\",\n                lineNumber: 9,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"/Users/zymmac/repos/coding-challenge-frontend-react/pages/_app.js\",\n            lineNumber: 8,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/zymmac/repos/coding-challenge-frontend-react/pages/_app.js\",\n        lineNumber: 7,\n        columnNumber: 5\n    }, this);\n}\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQStCO0FBQ0c7QUFDVTtBQUU3QixTQUFTRSxNQUFNLEVBQUVDLFVBQVMsRUFBRUMsVUFBUyxFQUFFLEVBQUU7SUFDdEQscUJBQ0UsOERBQUNILHNEQUFZQTtrQkFDWCw0RUFBQ0k7WUFBSUMsV0FBV04sb0RBQWdCO3NCQUM5Qiw0RUFBQ0c7Z0JBQVcsR0FBR0MsU0FBUzs7Ozs7Ozs7Ozs7Ozs7OztBQUloQyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kaW5nLWNoYWxsZW5nZS1mcm9udGVuZC1yZWFjdC8uL3BhZ2VzL19hcHAuanM/ZTBhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4uL3N0eWxlcy9nbG9iYWxzLmNzcyc7XG5pbXBvcnQgeyByb2JvdG8gfSBmcm9tICcuLi9mb250cyc7XG5pbXBvcnQgQXV0aFByb3ZpZGVyIGZyb20gJy4uL2NvbnRleHRzL0F1dGgnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH0pIHtcbiAgcmV0dXJuIChcbiAgICA8QXV0aFByb3ZpZGVyPlxuICAgICAgPGRpdiBjbGFzc05hbWU9e3JvYm90by5jbGFzc05hbWV9PlxuICAgICAgICA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XG4gICAgICA8L2Rpdj5cbiAgICA8L0F1dGhQcm92aWRlcj5cbiAgKTtcbn1cbiJdLCJuYW1lcyI6WyJyb2JvdG8iLCJBdXRoUHJvdmlkZXIiLCJNeUFwcCIsIkNvbXBvbmVudCIsInBhZ2VQcm9wcyIsImRpdiIsImNsYXNzTmFtZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/_app.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
+/***/ (<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+&nbsp;
+&nbsp;
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("react");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = require("react/jsx-dev-runtime");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "firebase/app":
+/*!*******************************!*\
+  !*** external "firebase/app" ***!
+  \*******************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import("</span>firebase/app");;</span></span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "firebase/auth":
+/*!********************************!*\
+  !*** external "firebase/auth" ***!
+  \********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import("</span>firebase/auth");;</span></span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "firebase/database":
+/*!************************************!*\
+  !*** external "firebase/database" ***!
+  \************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+"use strict";
+<span class="cstat-no" title="statement not covered" >module.exports = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import("</span>firebase/database");;</span></span>
+&nbsp;
+/***/ })
+&nbsp;
+};
+;
+&nbsp;
+// load runtime
+var __webpack_require__ = <span class="cstat-no" title="statement not covered" >require("../webpack-runtime.js");</span>
+<span class="cstat-no" title="statement not covered" >__webpack_require__.C(exports);</span>
+var __webpack_exec__ = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(m</span>oduleId) =&gt; (<span class="cstat-no" title="statement not covered" >__webpack_require__(__webpack_require__.s = moduleId))</span></span>
+var __webpack_exports__ = (<span class="cstat-no" title="statement not covered" >__webpack_exec__("./pages/_app.js"));</span>
+<span class="cstat-no" title="statement not covered" >module.exports = __webpack_exports__;</span>
+&nbsp;
+})();</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-04-20T13:51:30.360Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
