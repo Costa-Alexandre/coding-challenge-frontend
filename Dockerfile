@@ -5,10 +5,13 @@ FROM node:16-bullseye-slim as builder
 WORKDIR /app
 
 COPY package.json ./
-RUN npm install --omit=dev
+RUN npm install
 
 COPY . .
 RUN npm run build
+
+# Run tests
+RUN npm run test
 
 FROM node:16-bullseye-slim as runner
 WORKDIR /app

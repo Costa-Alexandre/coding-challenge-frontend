@@ -16,7 +16,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "test": "jest",
     "testCoverage": "jest --coverage --collectCoverageFrom=\"src/**/*.{js,jsx,ts,tsx}\" --coverageDirectory=\"coverage\""
   },
   "devDependencies": {
