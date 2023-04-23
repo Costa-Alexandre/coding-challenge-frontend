@@ -86,7 +86,7 @@ describe('UserMenu', () => {
     fireEvent.click(logOutButton);
     await waitFor(() => {
       expect(mockAuthValue.logout).toHaveBeenCalled();
-      expect(screen.getByText(/Failed to log oout/i)).toBeInTheDocument();
+      expect(screen.getByText(/Failed to log out/i)).toBeInTheDocument();
     });
   });
 });
