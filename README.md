@@ -1,5 +1,6 @@
 ## Update
 
+
 I decided to use this project to learn next.JS, so here is an improved version of this challenge. 
 
 ## Deployment
