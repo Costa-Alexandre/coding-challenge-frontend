@@ -4,8 +4,8 @@ steps:
     args:
     - '-c'
     - |
-      gsutil cp -n gs://coding-challenge-react-service-account/serviceAccountKey.json .
-      gsutil cp -n gs://coding-challenge-react-service-account/.env .
+      gsutil cp -n gs://coding-challenge-next-$_ENVIRONMENT/serviceAccountKey.json .
+      gsutil cp -n gs://coding-challenge-next-$_ENVIRONMENT/.env .
     id: Get secrets
   - name: gcr.io/cloud-builders/docker
     args:
