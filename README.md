@@ -1,76 +1,58 @@
-## Update
+# Dashboard App
 
+This is an application built with Next.js and React that serves static SSR web pages. The primary goal of this application is to allow a hypothetical company's administrative staff to oversee the company's operative results. This project is forked from a 2-day challenge for a frontend student job position. It was adapted as an academic project for learning purposes.
 
-I decided to use this project to learn next.JS, so here is an improved version of this challenge. 
+## Features
 
-## Deployment
+The application displays the following features:
 
-This project was deployed to Vercel: https://coding-challenge-nextjs.vercel.app/
+    Total value of the company's sales for a given month
+    Top 5 most sold products
+    Top 5 recent orders
+    Company's revenue target for the month
+    Automatic data refresh every minute (if there are new data available)
 
-# AM Coding Challenge - Frontend (React)
+## Technologies Used
 
-## The case study: Product Order Dashboard
+The application uses the following technologies and frameworks:
 
-![AM Order Dashboard Challenge](https://raw.githubusercontent.com/Costa-Alexandre/coding-challenge-frontend/nextJS/Order-Dashboard-v2.png)
+    - Next.js
+    - React
+    - Firebase for: 
+        - Authentication
+        - Realtime Database (for user roles)
+    - Google Sheets API for storing and fetching orders
+    - Docker for containerization
+    - Cloud Build / Cloud Run for continuous deployment
+    - Cloud Storage for storing environment variables and service account keys
+    - Artifacts Registry for storing Docker images
+    - JEST and @testing-library/react for automated testing
 
-Monitoring their order target vs. actual orders is a typical problem for growing product businesses.
-To tackle that challenge, BLACK PRODUCTS Inc. wants to build an "order dashboard" - the software you will develop!
+> ⚠️ Note that the application is not using a database, but a spreadsheet. This is part of the requirements of the challenge. I would never use a spreadsheet as a database in a real-world public application.
 
-The orders are stored in a Google sheet and need to be displayed using the [Google-Sheet API](https://developers.google.com/sheets/api)
+## Pre-Rendering
 
-## Product Requirements
+The pre-rendering process is handled by [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props). An authenticated (*step 1*) request fetches the orders and revenue targets data (*step 2*) and passes them as props to the React page. The page is then server-side rendered and served as a static page to the client (*step 3*).
 
-As an employee at BLACK PRODUCTS Inc.,
+### Data Flow Diagram
 
-- [x] I want to see the sum of all orders for a given month
-- [x] I want to be able to filter by month
-- [x] I want to see a progress bar, that shows the current order volume (X%) vs. the order target (100%)
-- [x] I want to see the target value
-- [x] I want to see the 5 most recent orders in the selected month
-- [x] For each order, I want to see
-  - [x] the order number
-  - [x] the order date
-  - [x] the product name
-  - [x] the order volume
-- [x] I want to see the top 5 products for the time period
-- [x] For each top product, I want to see
-  - [x] the name of the product
-  - [x] the sum of all orders of that product
-  - [x] a progress bar to display the percentage that the product had on the total order volume
-- [x] The dashboard refreshes regularly and displays a counter, when the next refresh will happen
+![Diagram Overview](docs/_media/data-flow-diagram.png)
+## Continuous Deployment and Operation
 
-## Your Mission
+The application is deployed using Google Cloud Build and Cloud Run. Continuous deployment is triggered by merging a new commit to the staging or production branches on GitHub. Before deployment, the code is tested using automated tests.
 
-Create the React application that satisfies all must-have requirements above, plus any nice-to-have requirements you wish to include.
+The .env file and the service account key are stored in cloud storage buckets, per environment (staging or production), and they are fetched during the cloud build steps.
 
-For that, you’ll need to use the [Google-Sheet API](https://developers.google.com/sheets/api) and fetch the data from this publicly-available [Spreadsheet](https://docs.google.com/spreadsheets/d/1La-EJVOrNt3AwWHYvhuCQ5SRtFE9h_kYjgx0dau1HN4/edit?usp=sharing) that contains all the order data.
+### Cloud Infrastructure Diagram
 
-For the design of the dashboard, please refer to the provided [Figma](https://www.figma.com/file/bJINBUw3xoVfpbQ1BkPzs6/Untitled?node-id=1%3A2)
-We expect a pixel-perfect design. If you are not able to implement a particular requirement, please provide a description of what and why you could not implement.
+![Diagram Overview](docs/_media/pipeline-diagram.png)
 
-You can use any boilerplate/approach you prefer (nextjs, create react app, ...), but try to keep it simple. We encourage you to use your favorite tools and packages to build a solid React application.
+## Local Deployment
 
-You can assume that you do not have to support legacy browsers. Feel free to use modern features such as **fetch** or **flexbox**.
+To deploy the application locally, you would need to set up a Firebase project with authentication and a realtime database. You would also need a spreadsheet with orders and targets to work as the "database". Finally, you would need a service account key JSON file with the key to read and edit the spreadsheet.
 
-You don't have to host your service publicly, but feel free to do that.
-Please include a description in the README.md how to run the project locally.
+Once you have set up these requirements, run `npm install` to install the necessary packages and `npm run build` to build the application. The application will run on `localhost:3000`.
 
-## Tech Requirements
+## Security Considerations
 
-- React
-- Tests: Jest
-- Code Linter
-- Typescript is a plus
-- CSSinJS is a plus: styled-components, styled-system, ...
-
-## Instructions
-
-- Fork this repo
-- The challenge is on!
-- Build a performant, clean and well-structured solution
-- Commit early and often. We want to be able to check your progress
-- Please complete your working solution within 2 days of receiving this challenge, and be sure to notify us with a link to your repo, when it is ready for review.
-
-## License
-
-We have licensed this project under the MIT license so that you may use this for a portfolio piece (or anything else!).
+Please note that this application is an academic project just for learning purposes. There are many security flaws, and it would require more time to make this app ready for production (if ever). I recommend using this application for educational purposes only.
