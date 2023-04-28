@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useAuth } from '../../contexts/Auth';
 import { useSheets } from '../../contexts/Sheets';
+import { useQuery } from '../../hooks';
 
 function UserMenu({ message }) {
   const [error, setError] = useState('');
@@ -10,7 +10,7 @@ function UserMenu({ message }) {
   const { logout, currentUser, getUserRole } = useAuth();
   const [role, setRole] = useState('');
   const { updateOrdersRow } = useSheets();
-  const router = useRouter();
+  const { year, month, router } = useQuery();
 
   const handleGetUserRole = useCallback(async () => {
     if (currentUser) {
@@ -31,8 +31,9 @@ function UserMenu({ message }) {
     }
   };
 
-  const handleTest = () => {
-    updateOrdersRow(98, { orderNumber: '2000', orderDate: '10.04.2023', product: 'Test', orderVolume: 100 });
+  const handleTest = async () => {
+    await updateOrdersRow(98, { orderNumber: '2000', orderDate: `10.${month}.${year}`, product: 'Test added by Test Edit button', orderVolume: 100 });
+    router.reload();
   };
 
   useEffect(() => {
@@ -48,10 +49,9 @@ function UserMenu({ message }) {
         <button type="button" onClick={handleLogout} disabled={loading}>
           Log out
         </button>
-        <button type="button" onClick={handleTest}>
+        {role === 'editor' && (<button type="button" onClick={handleTest}>
           Test Edit
-        </button>
-        {role === 'editor' && <Link href="/edit-data">Edit Data</Link>}
+        </button>)}
         <Link href="/update-profile">Update Profile</Link>
       </div>
     </div>
