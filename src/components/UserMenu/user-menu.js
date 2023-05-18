@@ -33,7 +33,7 @@ function UserMenu({ message }) {
 
   const handleTest = async () => {
     await updateOrdersRow(98, { orderNumber: '2000', orderDate: `10.${month}.${year}`, product: 'Test added by Test Edit button', orderVolume: 100 });
-    router.reload();
+    router.replace(`/${year}/${month}`);
   };
 
   useEffect(() => {

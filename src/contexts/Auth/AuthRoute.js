@@ -7,7 +7,7 @@ function AuthRoute({ children }) {
   const { currentUser, loading } = useAuth();
 
   useEffect(() => {
-    if (!currentUser) {
+    if (currentUser === null) {
       router.push('/login');
     }
   }, [currentUser]);
