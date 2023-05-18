@@ -6,8 +6,8 @@ import { getTopProducts } from './helpers';
 export default function TopProducts({ orders, total }) {
   const topProducts = getTopProducts(orders, 5);
 
-  return (
-    <table>
+  return ( topProducts.length === 0 ? <table>No data</table> :
+    (<table>
       <thead>
         <tr>
           <th>TOP 5 PRODUCTS</th>
@@ -18,7 +18,7 @@ export default function TopProducts({ orders, total }) {
       <tbody className={montserratNormal.className}>
         <TableRows topProducts={topProducts} total={total} />
       </tbody>
-    </table>
+    </table>)
   );
 }
 

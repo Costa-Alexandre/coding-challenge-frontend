@@ -3,8 +3,8 @@ import { formatDate } from './helpers';
 import { montserratNormal } from '../../fonts';
 
 export default function TopRecentOrders({ orders }) {
-  return (
-    <table>
+  return ( orders.length === 0 ? <table>No data</table> :
+    (<table>
       <thead>
         <tr>
           <th>NR</th>
@@ -16,7 +16,7 @@ export default function TopRecentOrders({ orders }) {
       <tbody className={montserratNormal.className}>
         <TableRows orders={orders} maxRows={5} />
       </tbody>
-    </table>
+    </table>)
   );
 }
 
