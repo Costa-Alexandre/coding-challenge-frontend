@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useAuth } from '../../contexts/Auth';
 import { useSheets } from '../../contexts/Sheets';
 import { useQuery } from '../../hooks';
+import { withLeadingZero } from '../../utils';
 
 function UserMenu({ message }) {
   const [error, setError] = useState('');
@@ -32,7 +33,7 @@ function UserMenu({ message }) {
   };
 
   const handleTest = async () => {
-    await updateOrdersRow(98, { orderNumber: '2000', orderDate: `10.${month}.${year}`, product: 'Test added by Test Edit button', orderVolume: 100 });
+    await updateOrdersRow(98, { orderNumber: '2000', orderDate: `10.${withLeadingZero(month)}.${year}`, product: 'Test added by Test Edit button', orderVolume: 100 });
     router.replace(`/${year}/${month}`);
   };
 
