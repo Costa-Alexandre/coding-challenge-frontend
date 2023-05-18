@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
 import { useAuth } from '../../contexts/Auth';
 import { useSheets } from '../../contexts/Sheets';
 import { useQuery } from '../../hooks';
@@ -32,6 +31,10 @@ function UserMenu({ message }) {
     }
   };
 
+  const handleUpdateProfile = () => {
+    router.push('/update-profile');
+  }
+
   const handleTest = async () => {
     await updateOrdersRow(98, { orderNumber: '2000', orderDate: `10.${withLeadingZero(month)}.${year}`, product: 'Test added by Test Edit button', orderVolume: 100 });
     router.replace(`/${year}/${month}`);
@@ -53,7 +56,7 @@ function UserMenu({ message }) {
         {role === 'editor' && (<button type="button" onClick={handleTest}>
           Test Edit
         </button>)}
-        <Link href="/update-profile">Update Profile</Link>
+        <button type="button" onClick={handleUpdateProfile}> Update Profile </button>
       </div>
     </div>
   );
