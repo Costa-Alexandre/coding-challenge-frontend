@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../contexts/Auth';
 
+import styles from './styles/login.module.css';
+
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -27,35 +29,36 @@ export default function ForgotPassword() {
   };
 
   return (
-    <main>
-      <section>
+    <div className={styles.container}>
+      <div className={styles.box}>
         <h2>Password Reset</h2>
         {error && <div>{error}</div>}
         <form>
-          <div>
-            <label htmlFor="email-input">
-              Email
-              <input
-                id="email-input"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </label>
-          </div>
+          <label htmlFor="email-input">
+            Email
+            <input
+              id="email-input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+
           <button disabled={loading} type="button" onClick={handleSubmit}>
             Reset Password
           </button>
         </form>
+      </div>
+      <div className={styles.links}>
         <div>
           <Link href="/login">Log in</Link>
         </div>
-      </section>
-      <section>
-        <p>Need an account?</p>
-        <Link href="/signup">Sign Up</Link>
-      </section>
-    </main>
+        <div>
+          <div>Need an account?</div>
+          <Link href="/signup">Sign Up</Link>
+        </div>
+      </div>
+    </div>
   );
 }

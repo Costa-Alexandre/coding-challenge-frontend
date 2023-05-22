@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4rem;
+  border: 1px solid white;
+}
+
+.box {
+  padding: 0 2rem;
+  width: 50vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.box form label {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.box form input, .box form select {
+  margin-left: 1rem;
+  flex-grow: 1;
+}
+
+.box form select {
+  flex-grow: 0;
+}
+
+.box form button {
+  width: 10rem;
+}
+
+.links {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links div {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.links div div {
+  margin-right: 1rem;
+}

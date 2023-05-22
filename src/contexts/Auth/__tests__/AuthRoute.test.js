@@ -17,7 +17,7 @@ describe('AuthRoute', () => {
 
   it('should redirect to /login when user is not logged in', () => {
     useAuth.mockImplementation(() => ({
-      currentUser: false,
+      currentUser: null,
       loading: null,
     }));
     render(<AuthRoute />);
